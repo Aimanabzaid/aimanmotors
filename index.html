@@ -577,6 +577,21 @@
     .google-copy strong{display:block;font-size:1.08rem}
     .google-copy span{display:block;color:#999;margin-top:4px;font-size:.9rem}
 
+    /* OPINIONES */
+    .opiniones{padding-top:0}
+    .rating{display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:var(--card);border-radius:20px;padding:16px 22px;white-space:nowrap}
+    .rating:hover{border-color:#555}
+    .rating-num{font-size:2.6rem;font-weight:900;letter-spacing:-.04em;line-height:1}
+    .rating small,.review small{display:block;color:var(--muted);font-size:.85rem}
+    .review-stars{color:#f5b301;letter-spacing:.1em}
+    .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .review{margin:0;border:1px solid var(--line);background:var(--card);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:16px}
+    .review blockquote{margin:0;color:#d8d8d8;flex:1}
+    .review figcaption{display:flex;align-items:center;gap:12px}
+    .review-avatar{width:40px;height:40px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-weight:900}
+    .reviews-more{text-align:center;margin-top:26px}
+    @media(max-width:900px){.review-grid{grid-template-columns:1fr}}
+
     /* FAQ */
     .faq-list{
       max-width:900px;
@@ -801,6 +816,7 @@
       <a href="#reales">Coches reales</a>
       <a href="#propietarios">Rentabiliza tu coche</a>
       <a href="#servicios">Servicios</a>
+      <a href="#opiniones">Opiniones</a>
       <a href="#nosotros">Nosotros</a>
     </div>
 
@@ -813,6 +829,7 @@
     <a href="#reales">Coches reales</a>
     <a href="#propietarios">Rentabiliza tu coche</a>
     <a href="#servicios">Revisiones y mantenimiento</a>
+    <a href="#opiniones">Opiniones</a>
     <a href="#nosotros">Sobre Aiman Motors</a>
     <a href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a>
   </div>
@@ -981,19 +998,42 @@
         </div>
       </div>
 
-      <div class="google-box">
-        <div class="google-copy">
-          <div class="google-stars" aria-label="Cinco estrellas">★★★★★</div>
-          <div>
-            <strong>Clientes que ya han confiado en Aiman Motors</strong>
-            <span>Puedes consultar nuestras reseñas públicas en Google.</span>
-          </div>
-        </div>
-        <a class="btn dark" href="https://www.google.com/search?q=Aiman+Motors+Spain+rese%C3%B1as" target="_blank" rel="noopener">VER RESEÑAS EN GOOGLE</a>
-      </div>
     </div>
   </section>
 
+
+  <section id="opiniones" class="opiniones">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Opiniones</div>
+          <h2>Lo que dicen nuestros clientes.</h2>
+        </div>
+        <a class="rating" href="https://www.google.com/search?q=Aiman+Motors+Spain+rese%C3%B1as" target="_blank" rel="noopener" aria-label="4,6 de 5 en Google, 23 reseñas">
+          <span class="rating-num">4,6</span>
+          <span><span class="review-stars" aria-hidden="true">★★★★★</span><small>23 reseñas en Google</small></span>
+        </a>
+      </div>
+      <div class="review-grid">
+        <figure class="review">
+          <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>“Hicieron un buen trabajo asistiendo pronto y revisando mi coche para saber qué tenia que hacer para ponerlo a punto antes de venderlo.”</blockquote>
+          <figcaption><span class="review-avatar" aria-hidden="true">A</span><span><strong>Alejandro H.</strong><small>Reseña en Google</small></span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>“Muy buen trato a destacar y hizo una búsqueda exhaustiva hasta encontrar el coche que se adaptaba tanto a mi presupuesto como características, además los servicios de limpieza que ofrecen son de alta calidad quede muy contento con todo el trato y servicio.”</blockquote>
+          <figcaption><span class="review-avatar" aria-hidden="true">M</span><span><strong>Miguel M.</strong><small>Reseña en Google</small></span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>“Mi experiencia con ellos, es muy muy positiva. Aiman un profesional, atento y detallista. Noelia un encanto y en todo momento solicita y muy pendiente de nuestra necesidad ante la compra del coche. Se pusieron desde el minuto uno con nosotros. Es una empresa a tener en cuenta.”</blockquote>
+          <figcaption><span class="review-avatar" aria-hidden="true">M</span><span><strong>María del Pilar M.</strong><small>Reseña en Google</small></span></figcaption>
+        </figure>
+      </div>
+      <div class="reviews-more"><a class="btn dark" href="https://www.google.com/search?q=Aiman+Motors+Spain+rese%C3%B1as" target="_blank" rel="noopener">VER TODAS LAS RESEÑAS EN GOOGLE</a></div>
+    </div>
+  </section>
 
   <section id="faq">
     <div class="wrap">
