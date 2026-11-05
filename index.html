@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aiman Motors | Coches a la carta en Madrid y Marbella, importación y revisiones</title>
-  <meta name="description" content="Aiman Motors: coches a la carta en Madrid y Marbella, búsqueda en toda España e importación desde Europa, revisión precompra, mantenimiento y gestión para propietarios.">
+  <title>Aiman Motors | Alquila tu coche parado con gestión profesional en Madrid y Marbella</title>
+  <meta name="description" content="¿Tienes un coche parado? Puede generar ingresos. Aiman Motors gestiona el alquiler de vehículos de propietarios particulares en Madrid y Marbella. También coches a la carta, importación y revisiones.">
   <style>
     :root{
       --bg:#070707;
@@ -577,6 +577,57 @@
     .google-copy strong{display:block;font-size:1.08rem}
     .google-copy span{display:block;color:#999;margin-top:4px;font-size:.9rem}
 
+    /* PORTADA */
+    .hero-sub{
+      font-size:clamp(1.6rem,3.4vw,2.8rem);
+      font-weight:900;
+      letter-spacing:-.03em;
+      line-height:1.05;
+      margin-top:14px;
+      font-stretch:112%;
+    }
+
+    /* PROPIETARIOS */
+    .owner-note{color:#bdbdbd;font-size:.95rem;border-left:2px solid #fff;padding-left:12px}
+    .owner-why{margin-top:14px;border:1px solid var(--line);border-radius:28px;background:var(--card);padding:34px}
+    .owner-why-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}
+    .owner-why-head h3{margin:0;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:1;letter-spacing:-.04em;font-stretch:112%}
+    .owner-why-head p{margin:0;color:var(--muted);max-width:340px}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .why{border:1px solid var(--line);border-radius:20px;background:#0d0d0d;padding:22px;display:flex;flex-direction:column;gap:6px}
+    .why span:last-child{color:var(--muted);font-size:.93rem}
+    .why-icon{width:42px;height:42px;border-radius:12px;background:#fff;color:#000;display:grid;place-items:center;margin-bottom:8px}
+    .why-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round}
+    .owner-cta-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+    @media(max-width:900px){.why-grid{grid-template-columns:1fr 1fr}.owner-why-head{flex-direction:column;align-items:flex-start}}
+    @media(max-width:560px){.why-grid{grid-template-columns:1fr}.owner-why{padding:22px}.owner-cta-row .btn{width:100%}}
+
+    /* FAQ: grupos */
+    .faq-group{margin:18px 0 4px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#cfcfcf}
+    .faq-group:first-child{margin-top:0}
+
+    /* FORMULARIOS */
+    .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+    .opt{color:#777;font-weight:400}
+    .file-input{position:absolute;width:1px;height:1px;opacity:0}
+    .file-drop{display:flex;flex-direction:column;gap:4px;border:1px dashed #3a3a3a;border-radius:13px;padding:16px;cursor:pointer;background:#080808}
+    .file-drop .file-text{font-weight:800;color:#fff}
+    .file-drop small{color:#888}
+    .file-drop.has-files{border-color:#fff;border-style:solid}
+    .file-input:focus-visible + .file-drop,.file-drop:hover{border-color:#777}
+    .consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px;color:#bbb;font-size:.88rem;cursor:pointer}
+    .consent input{margin-top:3px;width:18px;height:18px;accent-color:#fff;flex:0 0 auto}
+    .consent a{text-decoration:underline}
+    .form-status{min-height:1.2em;margin:12px 0 0;color:#bbb;font-size:.9rem}
+    .form-status.error{color:#ff8a80}
+    .wa-alt{display:block;margin:14px auto 0;background:none;border:0;color:#ccc;font:inherit;font-weight:700;font-size:.9rem;text-decoration:underline;cursor:pointer}
+    .wa-alt:hover{color:#fff}
+    .modal-submit:disabled{opacity:.6;cursor:wait;transform:none}
+    .form-ok{text-align:center;padding:20px 0 6px}
+    .form-ok h3{font-size:clamp(1.8rem,4vw,2.4rem);letter-spacing:-.04em;margin:14px 0 8px}
+    .form-ok p{color:#aaa;max-width:420px;margin:0 auto 22px}
+    .ok-icon{width:56px;height:56px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-size:1.6rem;font-weight:900;margin:auto}
+
     /* OPINIONES */
     .opiniones{padding-top:0}
     .rating{display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:var(--card);border-radius:20px;padding:16px 22px;white-space:nowrap}
@@ -717,16 +768,16 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Aiman Motors | Encuentra. Compra. Rentabiliza.">
-  <meta property="og:description" content="Coches a la carta en Madrid y Marbella: búsqueda, importación, revisión precompra y gestión para propietarios.">
+  <meta property="og:title" content="Aiman Motors | ¿Tienes un coche parado? Puede generar ingresos.">
+  <meta property="og:description" content="Gestionamos el alquiler de coches de propietarios particulares en Madrid y Marbella: evaluación previa, condiciones claras y coordinación de reservas.">
   <meta property="og:url" content="https://aimanmotors.com/">
   <meta property="og:image" content="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=85">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Aiman Motors">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Aiman Motors | Encuentra. Compra. Rentabiliza.">
-  <meta name="twitter:description" content="Coches a la carta, revisiones, mantenimiento y gestión para propietarios.">
+  <meta name="twitter:title" content="Aiman Motors | ¿Tienes un coche parado? Puede generar ingresos.">
+  <meta name="twitter:description" content="Gestionamos el alquiler de coches de propietarios particulares en Madrid y Marbella.">
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=85">
 
   <script type="application/ld+json">
@@ -743,7 +794,7 @@
       "https://www.instagram.com/aimanmotorsspain/",
       "https://www.facebook.com/aimanmotorsspain"
     ],
-    "description":"Coches a la carta en Madrid y Marbella, importación desde Europa, revisión precompra, mantenimiento y gestión de vehículos para propietarios."
+    "description":"Gestión del alquiler de vehículos de propietarios particulares en Madrid y Marbella. Además, coches a la carta con importación desde Europa, revisión precompra y mantenimiento."
   }
   </script>
 
@@ -752,6 +803,70 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo funciona el alquiler?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nos cuentas qué coche tienes y cuándo está disponible. Hacemos una evaluación previa, te explicamos y acordamos contigo las condiciones y, si decides seguir, coordinamos las reservas con las personas interesadas en alquilarlo. Tu coche sigue siendo tuyo en todo momento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué requisitos debe cumplir mi vehículo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada coche pasa por una evaluación previa en la que revisamos su estado, su documentación y su uso. Te decimos con claridad si encaja antes de dar ningún paso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Quién puede utilizar mi coche?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Personas interesadas en alquilar con las que coordinamos nosotros cada reserva. Antes de empezar te explicamos qué requisitos pedimos a quien alquila tu coche."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se gestiona el seguro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es una de las primeras cosas que revisamos contigo. Antes de poner tu coche en alquiler te explicamos cómo queda cubierto durante los alquileres, para que lo tengas claro desde el principio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué ocurre si hay daños?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cómo se actúa ante cualquier daño forma parte de las condiciones que acordamos contigo antes de empezar, para que sepas de antemano qué pasa en cada caso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Quién gestiona las incidencias?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nosotros. Aiman Motors coordina el proceso y es tu contacto directo: si surge cualquier incidencia durante un alquiler, te informamos y nos encargamos de gestionarla."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo y cuándo recibo mis ingresos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La forma y la frecuencia de los pagos forman parte de las condiciones que acordamos contigo, y las conocerás antes de empezar. Los ingresos dependen de la demanda y de la disponibilidad de tu coche: no prometemos cantidades fijas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué comisión cobra Aiman Motors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de cada caso. Te la indicamos de forma transparente tras la evaluación previa, antes de que te comprometas a nada."
+      }
+    },
     {
       "@type": "Question",
       "name": "¿Podéis buscar un coche concreto para mí?",
@@ -774,14 +889,6 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Sí. La revisión precompra está pensada para detectar problemas mecánicos, comprobar el estado general y ayudarte a decidir con más información."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cómo funciona rentabilizar mi coche?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nos cuentas qué vehículo tienes, dónde está y cuánto lo utilizas. Después valoramos contigo si encaja y te explicamos el proceso antes de tomar ninguna decisión."
       }
     },
     {
@@ -814,20 +921,20 @@
     <div class="nav-links">
       <a href="#carta">Coches a la carta</a>
       <a href="#reales">Coches reales</a>
-      <a href="#propietarios">Rentabiliza tu coche</a>
+      <a href="#propietarios">Alquila tu coche</a>
       <a href="#servicios">Servicios</a>
       <a href="#opiniones">Opiniones</a>
       <a href="#nosotros">Nosotros</a>
     </div>
 
-    <a class="btn" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener">HABLAR AHORA</a>
+    <a class="btn" href="#propietarios" data-open-modal="ownerModal">ALQUILAR MI COCHE</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
   </div>
 
   <div class="mobile-menu" id="mobileMenu">
     <a href="#carta">Coches a la carta</a>
     <a href="#reales">Coches reales</a>
-    <a href="#propietarios">Rentabiliza tu coche</a>
+    <a href="#propietarios">Alquila tu coche</a>
     <a href="#servicios">Revisiones y mantenimiento</a>
     <a href="#opiniones">Opiniones</a>
     <a href="#nosotros">Sobre Aiman Motors</a>
@@ -838,28 +945,29 @@
 <header class="hero">
   <div class="wrap">
     <div class="hero-content">
-      <div class="eyebrow">Madrid · Marbella · Toda España e importación</div>
-      <h1>ENCUENTRA.<br>COMPRA.<br>RENTABILIZA.</h1>
+      <div class="eyebrow">Gestión de alquiler para propietarios · Madrid · Marbella</div>
+      <h1>¿TIENES UN<br>COCHE<br>PARADO?</h1>
+      <div class="hero-sub">Puede generar ingresos.</div>
       <p>
-        Coches a la carta en España y Europa, revisión precompra, mantenimiento y gestión para propietarios que quieren rentabilizar su coche.
+        Gestionamos el alquiler de coches de propietarios particulares: evaluamos tu vehículo, acordamos las condiciones contigo y coordinamos cada reserva.
       </p>
 
       <div class="hero-actions">
-        <a class="btn" href="#" data-open-modal="carModal">BUSCAR MI COCHE</a>
-        <a class="btn dark" href="#" data-open-modal="ownerModal">RENTABILIZAR MI COCHE</a>
+        <a class="btn" href="#propietarios" data-open-modal="ownerModal">QUIERO ALQUILAR MI COCHE</a>
+        <a class="btn dark" href="#carta" data-open-modal="carModal">BUSCAR MI COCHE</a>
       </div>
 
-      <a class="mini-link" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener">Hablar directamente por WhatsApp →</a>
+      <a class="mini-link" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20tengo%20un%20coche%20y%20quiero%20alquilarlo%20con%20vosotros." target="_blank" rel="noopener">¿Prefieres hablar? Escríbenos por WhatsApp →</a>
     </div>
   </div>
 </header>
 
-<section class="trust-strip" aria-label="Ventajas Aiman Motors" style="padding:0">
+<section class="trust-strip" aria-label="Por qué confiar tu coche a Aiman Motors" style="padding:0">
   <div class="wrap trust-grid">
-    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span>Madrid, Marbella y toda España</span></div>
-    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg></span><span>Importación desde Europa</span></div>
-    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M8.5 11l2 2 3.5-4M16 16l5 5"/></svg></span><span>Criterio mecánico</span></div>
-    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></span><span>Trato directo</span></div>
+    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M8.5 11l2 2 3.5-4M16 16l5 5"/></svg></span><span>Evaluación previa del vehículo</span></div>
+    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></span><span>Condiciones claras y acordadas</span></div>
+    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4M9 14l2 2 4-4"/></svg></span><span>Coordinación de reservas</span></div>
+    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></span><span>Comunicación directa</span></div>
   </div>
 </section>
 
@@ -901,7 +1009,7 @@
             </div>
           </div>
 
-          <a class="btn" href="#" data-open-modal="carModal">BUSCAR MI COCHE</a>
+          <a class="btn" href="#carta" data-open-modal="carModal">BUSCAR MI COCHE</a>
         </div>
       </div>
     </div>
@@ -942,31 +1050,51 @@
     <div class="wrap">
       <div class="owner-box">
         <div class="owner-content">
-          <div class="eyebrow">02 · Rentabiliza tu coche</div>
-          <h2>Haz que tu coche trabaje para ti.</h2>
+          <div class="eyebrow">02 · Alquila tu coche</div>
+          <h2>Tu coche parado puede generar ingresos.</h2>
 
           <div class="owner-strong">
             ¿Tienes un coche que apenas utilizas y solo te genera gastos?
           </div>
 
           <p>
-            Deja de pagar por tenerlo parado. Con Aiman Motors te ayudamos a
-            poner tu vehículo en alquiler y rentabilizarlo cuando tú no lo necesitas.
+            Aiman Motors gestiona el alquiler de vehículos de propietarios particulares.
+            Tú pones el coche cuando no lo necesitas; nosotros coordinamos el proceso
+            con las personas interesadas en alquilarlo.
           </p>
+          <p class="owner-note">No tenemos flota propia: cada coche pertenece a su propietario.</p>
 
-          <a class="btn" href="#" data-open-modal="ownerModal">
-            QUIERO QUE MI COCHE GENERE INGRESOS
-          </a>
+          <a class="btn" href="#propietarios" data-open-modal="ownerModal">QUIERO ALQUILAR MI COCHE</a>
 
-          <div class="micro-cta">Cuéntanos qué coche tienes y te explicamos cómo funciona.</div>
+          <div class="micro-cta">Sin compromiso. Te explicamos las condiciones antes de tomar ninguna decisión.</div>
         </div>
       </div>
 
-      <div class="owner-steps" aria-label="Cómo funciona rentabilizar tu coche">
-        <div class="owner-step"><div class="num">1</div><strong>Nos cuentas tu coche</strong><span>Marca, modelo, año, kilómetros y ciudad.</span></div>
-        <div class="owner-step"><div class="num">2</div><strong>Valoramos si encaja</strong><span>Vemos contigo cuánto lo usas y si tiene sentido ponerlo a trabajar.</span></div>
-        <div class="owner-step"><div class="num">3</div><strong>Te explicamos el proceso</strong><span>Todo claro y por adelantado, antes de tomar ninguna decisión.</span></div>
-        <div class="owner-step"><div class="num">4</div><strong>Tú decides</strong><span>Sin compromiso: solo seguimos adelante si te convence.</span></div>
+      <div class="owner-why">
+        <div class="owner-why-head">
+          <h3>¿Por qué confiar tu coche a Aiman Motors?</h3>
+          <p>Profesionalidad, transparencia y trato directo en cada paso.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why"><span class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M8.5 11l2 2 3.5-4M16 16l5 5"/></svg></span><strong>Evaluación previa</strong><span>Revisamos el estado y la documentación de tu coche antes de empezar.</span></div>
+          <div class="why"><span class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></span><strong>Condiciones claras</strong><span>Las acordamos contigo antes de poner tu coche en alquiler.</span></div>
+          <div class="why"><span class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><strong>Gestión personalizada</strong><span>Cada propietario y cada coche son distintos. Te atendemos de forma individual.</span></div>
+          <div class="why"><span class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4M9 14l2 2 4-4"/></svg></span><strong>Coordinación de reservas</strong><span>Nos encargamos de organizar las reservas y los alquileres.</span></div>
+          <div class="why"><span class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><strong>Seguimiento del alquiler</strong><span>Te mantenemos informado de cada alquiler de tu coche.</span></div>
+          <div class="why"><span class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></span><strong>Comunicación directa</strong><span>Hablas directamente con nosotros, por teléfono o WhatsApp.</span></div>
+        </div>
+      </div>
+
+      <div class="owner-steps" aria-label="Cómo funciona el alquiler de tu coche">
+        <div class="owner-step"><div class="num">1</div><strong>Nos cuentas tu coche</strong><span>Marca, modelo, año, kilómetros, ciudad y disponibilidad.</span></div>
+        <div class="owner-step"><div class="num">2</div><strong>Evaluación previa</strong><span>Valoramos tu vehículo y si encaja para el alquiler.</span></div>
+        <div class="owner-step"><div class="num">3</div><strong>Acordamos las condiciones</strong><span>Todo claro y por adelantado. Tú decides si seguimos.</span></div>
+        <div class="owner-step"><div class="num">4</div><strong>Gestionamos el alquiler</strong><span>Coordinamos las reservas y te mantenemos informado.</span></div>
+      </div>
+
+      <div class="owner-cta-row">
+        <a class="btn" href="#propietarios" data-open-modal="ownerModal">QUIERO ALQUILAR MI COCHE</a>
+        <a class="btn dark" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20tengo%20un%20coche%20y%20quiero%20alquilarlo%20con%20vosotros." target="_blank" rel="noopener">CONSULTAR POR WHATSAPP</a>
       </div>
     </div>
   </section>
@@ -978,13 +1106,14 @@
           <div class="eyebrow">03 · Servicios</div>
           <h2>También cuidamos de tu coche.</h2>
         </div>
+        <p>Servicios complementarios, coordinados con profesionales colaboradores y con atención personalizada.</p>
       </div>
 
       <div class="services">
         <div class="service">
           <div>
             <h3>Revisión precompra</h3>
-            <p>Antes de comprar, revisamos el vehículo para que sepas exactamente qué estás comprando.</p>
+            <p>Antes de comprar, revisamos el vehículo con profesionales colaboradores para que sepas exactamente qué estás comprando.</p>
           </div>
           <a class="btn dark" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20quiero%20reservar%20una%20revisi%C3%B3n%20precompra." target="_blank" rel="noopener">RESERVAR REVISIÓN</a>
         </div>
@@ -992,7 +1121,7 @@
         <div class="service">
           <div>
             <h3>Mantenimiento</h3>
-            <p>Aceite, filtros, frenos, diagnosis y puesta a punto del vehículo.</p>
+            <p>Aceite, filtros, frenos, diagnosis y puesta a punto. Lo coordinamos con profesionales colaboradores y te atendemos de forma personalizada.</p>
           </div>
           <a class="btn dark" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20quiero%20pedir%20cita%20para%20mantenimiento." target="_blank" rel="noopener">PEDIR CITA</a>
         </div>
@@ -1042,10 +1171,50 @@
           <div class="eyebrow">Preguntas frecuentes</div>
           <h2>Lo importante, claro y sin rodeos.</h2>
         </div>
-        <p>Las dudas más habituales antes de trabajar con nosotros.</p>
+        <p>Las dudas más habituales, empezando por las de los propietarios.</p>
       </div>
 
       <div class="faq-list">
+        <h3 class="faq-group">Para propietarios</h3>
+        <details class="faq">
+          <summary>¿Cómo funciona el alquiler?</summary>
+          <p>Nos cuentas qué coche tienes y cuándo está disponible. Hacemos una evaluación previa, te explicamos y acordamos contigo las condiciones y, si decides seguir, coordinamos las reservas con las personas interesadas en alquilarlo. Tu coche sigue siendo tuyo en todo momento.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Qué requisitos debe cumplir mi vehículo?</summary>
+          <p>Cada coche pasa por una evaluación previa en la que revisamos su estado, su documentación y su uso. Te decimos con claridad si encaja antes de dar ningún paso.</p>
+          <!-- PENDIENTE: Detallar requisitos concretos: antigüedad máxima, kilometraje, ITV, seguro en vigor, estado mínimo. -->
+        </details>
+        <details class="faq">
+          <summary>¿Quién puede utilizar mi coche?</summary>
+          <p>Personas interesadas en alquilar con las que coordinamos nosotros cada reserva. Antes de empezar te explicamos qué requisitos pedimos a quien alquila tu coche.</p>
+          <!-- PENDIENTE: Detallar requisitos de los conductores: edad mínima, antigüedad del carné, documentación, fianza. -->
+        </details>
+        <details class="faq">
+          <summary>¿Cómo se gestiona el seguro?</summary>
+          <p>Es una de las primeras cosas que revisamos contigo. Antes de poner tu coche en alquiler te explicamos cómo queda cubierto durante los alquileres, para que lo tengas claro desde el principio.</p>
+          <!-- PENDIENTE: Detallar cómo funciona el seguro: qué póliza cubre los alquileres, quién la contrata y qué cubre. -->
+        </details>
+        <details class="faq">
+          <summary>¿Qué ocurre si hay daños?</summary>
+          <p>Cómo se actúa ante cualquier daño forma parte de las condiciones que acordamos contigo antes de empezar, para que sepas de antemano qué pasa en cada caso.</p>
+          <!-- PENDIENTE: Detallar el procedimiento ante daños: revisión de entrada y salida, fianza, quién paga las reparaciones y en qué plazo. -->
+        </details>
+        <details class="faq">
+          <summary>¿Quién gestiona las incidencias?</summary>
+          <p>Nosotros. Aiman Motors coordina el proceso y es tu contacto directo: si surge cualquier incidencia durante un alquiler, te informamos y nos encargamos de gestionarla.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Cómo y cuándo recibo mis ingresos?</summary>
+          <p>La forma y la frecuencia de los pagos forman parte de las condiciones que acordamos contigo, y las conocerás antes de empezar. Los ingresos dependen de la demanda y de la disponibilidad de tu coche: no prometemos cantidades fijas.</p>
+          <!-- PENDIENTE: Detallar forma de pago (transferencia...), periodicidad (mensual, por alquiler...) y plazos. -->
+        </details>
+        <details class="faq">
+          <summary>¿Qué comisión cobra Aiman Motors?</summary>
+          <p>Depende de cada caso. Te la indicamos de forma transparente tras la evaluación previa, antes de que te comprometas a nada.</p>
+          <!-- PENDIENTE: Detallar la comisión: porcentaje o importe y qué incluye. -->
+        </details>
+        <h3 class="faq-group">Coches a la carta y servicios</h3>
         <details class="faq">
           <summary>¿Podéis buscar un coche concreto para mí?</summary>
           <p>Sí. Nos indicas modelo, presupuesto y preferencias y filtramos opciones que encajen contigo antes de avanzar.</p>
@@ -1057,10 +1226,6 @@
         <details class="faq">
           <summary>¿Revisáis un coche antes de comprarlo?</summary>
           <p>Sí. La revisión precompra está pensada para detectar problemas mecánicos, comprobar el estado general y ayudarte a decidir con más información.</p>
-        </details>
-        <details class="faq">
-          <summary>¿Cómo funciona rentabilizar mi coche?</summary>
-          <p>Nos cuentas qué vehículo tienes, dónde está y cuánto lo utilizas. Después valoramos contigo si encaja y te explicamos el proceso antes de tomar ninguna decisión.</p>
         </details>
         <details class="faq">
           <summary>¿Dónde trabajáis?</summary>
@@ -1092,9 +1257,10 @@
           </p>
 
           <p>
-            El objetivo es crear soluciones reales para todo el mundo: ayudarte a
-            encontrar el coche adecuado, revisarlo, mantenerlo y sacar partido de él
-            cuando no lo utilizas.
+            Hoy nuestro foco está en los propietarios: ayudarte a sacar partido de tu
+            coche cuando no lo usas, gestionando su alquiler de forma cercana y
+            transparente. Y seguimos ayudándote a encontrar, revisar y mantener el
+            coche adecuado.
           </p>
 
           <div class="about-sign">Pasión por los coches. Soluciones para las personas.</div>
@@ -1106,12 +1272,12 @@
 
   <section class="final-cta" id="contacto">
     <div class="wrap">
-      <div class="eyebrow">¿Qué necesitas?</div>
+      <div class="eyebrow">¿Tienes un coche parado?</div>
       <h2>Tu próximo movimiento empieza aquí.</h2>
 
       <div class="final-actions">
-        <a class="btn" href="#" data-open-modal="carModal">BUSCAR MI COCHE</a>
-        <a class="btn dark" href="#" data-open-modal="ownerModal">RENTABILIZAR MI COCHE</a>
+        <a class="btn" href="#propietarios" data-open-modal="ownerModal">QUIERO ALQUILAR MI COCHE</a>
+        <a class="btn dark" href="#carta" data-open-modal="carModal">BUSCAR MI COCHE</a>
         <a class="btn dark" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener">HABLAR POR WHATSAPP</a>
       </div>
     </div>
@@ -1123,7 +1289,7 @@
   <div class="wrap">
     <div class="footer-inner">
       <strong>AIMAN MOTORS</strong>
-      <span>Madrid · Marbella · Toda España</span>
+      <span>Gestión de alquiler para propietarios · Madrid · Marbella</span>
       <span>© 2026 Aiman Motors</span>
     </div>
     <div class="contact-links">
@@ -1160,32 +1326,43 @@
     <div class="modal-top">
       <div>
         <h3 id="carModalTitle">¿Qué coche estás buscando?</h3>
-        <p>Rellénalo en 30 segundos y te llevamos directo a WhatsApp.</p>
+        <p>Rellénalo en 30 segundos y te contactamos. Si lo prefieres, seguimos por WhatsApp.</p>
       </div>
       <button class="modal-close" type="button" data-close-modal aria-label="Cerrar">✕</button>
     </div>
 
-    <form id="carForm">
+    <form id="carForm" class="lead-form" data-tipo="busqueda" data-wa-intro="Hola Aiman Motors, estoy buscando un coche.">
+      <input type="hidden" name="tipo" value="busqueda">
+      <div class="hp" aria-hidden="true"><label>No rellenar<input name="website" tabindex="-1" autocomplete="off"></label></div>
       <div class="modal-grid">
-        <div class="modal-field"><label for="mMarca">Marca</label><input id="mMarca" required placeholder="BMW"></div>
-        <div class="modal-field"><label for="mModelo">Modelo</label><input id="mModelo" required placeholder="320d"></div>
-        <div class="modal-field"><label for="mPresupuesto">Presupuesto</label><input id="mPresupuesto" inputmode="numeric" placeholder="18.000 €"></div>
-        <div class="modal-field"><label for="mAno">Año mínimo</label><input id="mAno" inputmode="numeric" placeholder="2019"></div>
-        <div class="modal-field"><label for="mKm">Km máximos</label><input id="mKm" inputmode="numeric" placeholder="100.000 km"></div>
+        <div class="modal-field"><label for="mMarca">Marca</label><input id="mMarca" name="marca" required maxlength="60" placeholder="BMW"></div>
+        <div class="modal-field"><label for="mModelo">Modelo</label><input id="mModelo" name="modelo" required maxlength="60" placeholder="320d"></div>
+        <div class="modal-field"><label for="mPresupuesto">Presupuesto</label><input id="mPresupuesto" name="presupuesto" inputmode="numeric" maxlength="30" placeholder="18.000 €"></div>
+        <div class="modal-field"><label for="mAno">Año mínimo</label><input id="mAno" name="ano" inputmode="numeric" maxlength="10" placeholder="2019"></div>
+        <div class="modal-field"><label for="mKm">Km máximos</label><input id="mKm" name="km" inputmode="numeric" maxlength="20" placeholder="100.000 km"></div>
         <div class="modal-field">
           <label for="mOrigen">Búsqueda</label>
-          <select id="mOrigen">
+          <select id="mOrigen" name="origen">
             <option>Me da igual</option>
             <option>Nacional</option>
             <option>Importación</option>
           </select>
         </div>
-        <div class="modal-field"><label for="mNombre">Nombre</label><input id="mNombre" autocomplete="name" required placeholder="Tu nombre"></div>
-        <div class="modal-field"><label for="mTelefono">Teléfono</label><input id="mTelefono" type="tel" autocomplete="tel" required placeholder="6XX XXX XXX"></div>
-        <div class="modal-field full"><label for="mNotas">Preferencias</label><textarea id="mNotas" placeholder="Motor, color, cambio, extras..."></textarea></div>
+        <div class="modal-field"><label for="mNombre">Nombre</label><input id="mNombre" name="nombre" autocomplete="name" required maxlength="100" placeholder="Tu nombre"></div>
+        <div class="modal-field"><label for="mTelefono">Teléfono</label><input id="mTelefono" name="telefono" type="tel" autocomplete="tel" required maxlength="30" placeholder="6XX XXX XXX"></div>
+        <div class="modal-field full"><label for="mNotas">Preferencias</label><textarea id="mNotas" name="notas" maxlength="2000" placeholder="Motor, color, cambio, extras..."></textarea></div>
       </div>
-      <button class="btn modal-submit" type="submit">CONTINUAR POR WHATSAPP</button>
+      <label class="consent"><input type="checkbox" name="privacidad" value="1" required> <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span></label>
+      <p class="form-status" role="status" aria-live="polite"></p>
+      <button class="btn modal-submit" type="submit">ENVIAR SOLICITUD</button>
+      <button class="wa-alt" type="button" data-wa-send>¿Lo prefieres por WhatsApp? Continúa por ahí →</button>
     </form>
+    <div class="form-ok" hidden>
+      <div class="ok-icon" aria-hidden="true">✓</div>
+      <h3>¡Solicitud enviada!</h3>
+      <p>Hemos recibido tu búsqueda. Te contactamos lo antes posible con las primeras opciones.</p>
+      <button class="btn" type="button" data-close-modal>CERRAR</button>
+    </div>
   </div>
 </div>
 
@@ -1193,24 +1370,52 @@
   <div class="modal-card">
     <div class="modal-top">
       <div>
-        <h3 id="ownerModalTitle">Cuéntanos qué coche tienes</h3>
-        <p>Te explicamos cómo puedes sacarle rendimiento.</p>
+        <h3 id="ownerModalTitle">Quiero alquilar mi coche</h3>
+        <p>Cuéntanos qué coche tienes. Lo valoramos y te explicamos las condiciones, sin compromiso.</p>
       </div>
       <button class="modal-close" type="button" data-close-modal aria-label="Cerrar">✕</button>
     </div>
 
-    <form id="ownerForm">
+    <form id="ownerForm" class="lead-form" data-tipo="propietario" data-wa-intro="Hola Aiman Motors, quiero alquilar mi coche." enctype="multipart/form-data">
+      <input type="hidden" name="tipo" value="propietario">
+      <div class="hp" aria-hidden="true"><label>No rellenar<input name="website" tabindex="-1" autocomplete="off"></label></div>
       <div class="modal-grid">
-        <div class="modal-field"><label for="oMarca">Marca</label><input id="oMarca" required placeholder="Volkswagen"></div>
-        <div class="modal-field"><label for="oModelo">Modelo</label><input id="oModelo" required placeholder="Golf"></div>
-        <div class="modal-field"><label for="oAno">Año</label><input id="oAno" inputmode="numeric" placeholder="2020"></div>
-        <div class="modal-field"><label for="oKm">Kilómetros</label><input id="oKm" inputmode="numeric" placeholder="75.000 km"></div>
-        <div class="modal-field"><label for="oCiudad">Ciudad</label><input id="oCiudad" autocomplete="address-level2" required placeholder="Madrid"></div>
-        <div class="modal-field"><label for="oNombre">Nombre</label><input id="oNombre" autocomplete="name" required placeholder="Tu nombre"></div>
-        <div class="modal-field full"><label for="oTelefono">Teléfono</label><input id="oTelefono" type="tel" autocomplete="tel" required placeholder="6XX XXX XXX"></div>
+        <div class="modal-field"><label for="oNombre">Nombre</label><input id="oNombre" name="nombre" autocomplete="name" required maxlength="100" placeholder="Tu nombre"></div>
+        <div class="modal-field"><label for="oTelefono">Teléfono</label><input id="oTelefono" name="telefono" type="tel" autocomplete="tel" required maxlength="30" placeholder="6XX XXX XXX"></div>
+        <div class="modal-field"><label for="oMarca">Marca</label><input id="oMarca" name="marca" required maxlength="60" placeholder="Volkswagen"></div>
+        <div class="modal-field"><label for="oModelo">Modelo</label><input id="oModelo" name="modelo" required maxlength="60" placeholder="Golf"></div>
+        <div class="modal-field"><label for="oAno">Año</label><input id="oAno" name="ano" inputmode="numeric" maxlength="10" placeholder="2020"></div>
+        <div class="modal-field"><label for="oKm">Kilometraje</label><input id="oKm" name="km" inputmode="numeric" maxlength="20" placeholder="75.000 km"></div>
+        <div class="modal-field"><label for="oCiudad">Ciudad</label><input id="oCiudad" name="ciudad" autocomplete="address-level2" required maxlength="60" placeholder="Madrid"></div>
+        <div class="modal-field">
+          <label for="oDisp">Disponibilidad</label>
+          <select id="oDisp" name="disponibilidad" required>
+            <option value="">Elige una opción</option>
+            <option>Todo el año</option>
+            <option>Algunos meses al año</option>
+            <option>Fines de semana</option>
+            <option>Temporadas concretas (verano, vacaciones…)</option>
+            <option>Aún no lo sé</option>
+          </select>
+        </div>
+        <div class="modal-field full">
+          <label for="oFotos">Fotos del coche <span class="opt">(opcional)</span></label>
+          <input id="oFotos" name="fotos[]" type="file" accept="image/*" multiple class="file-input">
+          <label class="file-drop" for="oFotos"><span class="file-text">Añadir fotos</span><small>Hasta 6. Nos ayudan a valorar tu coche más rápido.</small></label>
+        </div>
+        <div class="modal-field full"><label for="oComent">Comentarios <span class="opt">(opcional)</span></label><textarea id="oComent" name="comentarios" maxlength="2000" placeholder="Estado del coche, cuándo lo usas, dudas…"></textarea></div>
       </div>
-      <button class="btn modal-submit" type="submit">CONTINUAR POR WHATSAPP</button>
+      <label class="consent"><input type="checkbox" name="privacidad" value="1" required> <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span></label>
+      <p class="form-status" role="status" aria-live="polite"></p>
+      <button class="btn modal-submit" type="submit">ENVIAR SOLICITUD</button>
+      <button class="wa-alt" type="button" data-wa-send>¿Lo prefieres por WhatsApp? Envíalo por ahí →</button>
     </form>
+    <div class="form-ok" hidden>
+      <div class="ok-icon" aria-hidden="true">✓</div>
+      <h3>¡Solicitud enviada!</h3>
+      <p>Hemos recibido los datos de tu coche. Te contactamos lo antes posible para hacer la evaluación previa y explicarte las condiciones.</p>
+      <button class="btn" type="button" data-close-modal>CERRAR</button>
+    </div>
   </div>
 </div>
 
@@ -1236,7 +1441,7 @@ document.querySelectorAll("[data-open-modal]").forEach(btn=>{
     const modal=document.getElementById(btn.dataset.openModal);
     modal.classList.add("open");
     document.body.style.overflow="hidden";
-    const first=modal.querySelector("input");
+    const first=modal.querySelector("input:not([type=hidden]):not([name=website])");
     if(first) setTimeout(()=>first.focus(),50);
   });
 });
@@ -1264,34 +1469,100 @@ function wa(msg){
   window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank");
 }
 
-document.getElementById("carForm").addEventListener("submit",e=>{
-  e.preventDefault();
-  const msg=`Hola Aiman Motors, estoy buscando un coche.
-
-Marca: ${mMarca.value}
-Modelo: ${mModelo.value}
-Presupuesto: ${mPresupuesto.value||"Sin especificar"}
-Año mínimo: ${mAno.value||"Sin especificar"}
-Km máximos: ${mKm.value||"Sin especificar"}
-Búsqueda: ${mOrigen.value}
-Nombre: ${mNombre.value}
-Teléfono: ${mTelefono.value}
-Preferencias: ${mNotas.value||"Sin especificar"}`;
-  wa(msg);
+/* Prepara el formulario cada vez que se abre */
+document.querySelectorAll("[data-open-modal]").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const modal=document.getElementById(btn.dataset.openModal);
+    const form=modal && modal.querySelector(".lead-form");
+    if(!form) return;
+    form.dataset.t=Date.now();
+    const ok=modal.querySelector(".form-ok");
+    if(ok && !ok.hidden){ ok.hidden=true; form.hidden=false; form.reset(); updateFiles(form); }
+    setStatus(form,"");
+  });
 });
 
-document.getElementById("ownerForm").addEventListener("submit",e=>{
-  e.preventDefault();
-  const msg=`Hola Aiman Motors, quiero información para rentabilizar mi coche.
+function setStatus(form,txt,type){
+  const s=form.querySelector(".form-status");
+  if(!s) return;
+  s.textContent=txt;
+  s.className="form-status"+(type?" "+type:"");
+}
 
-Marca: ${oMarca.value}
-Modelo: ${oModelo.value}
-Año: ${oAno.value||"Sin especificar"}
-Kilómetros: ${oKm.value||"Sin especificar"}
-Ciudad: ${oCiudad.value}
-Nombre: ${oNombre.value}
-Teléfono: ${oTelefono.value}`;
-  wa(msg);
+function waMessage(form){
+  const lines=[form.dataset.waIntro,""];
+  form.querySelectorAll("input[name],select[name],textarea[name]").forEach(el=>{
+    if(["tipo","website","privacidad","fotos[]"].includes(el.name)) return;
+    const label=form.querySelector('label[for="'+el.id+'"]');
+    const name=label?label.childNodes[0].textContent.trim():el.name;
+    lines.push(name+": "+(el.value.trim()||"Sin especificar"));
+  });
+  const f=form.querySelector('input[type="file"]');
+  if(f && f.files.length) lines.push("","(Te mando las fotos por aquí.)");
+  return lines.join("\n");
+}
+
+/* Fotos: contador y compresión antes de enviar */
+const MAX_FOTOS=6;
+function updateFiles(form){
+  const input=form.querySelector('input[type="file"]');
+  if(!input) return;
+  const t=form.querySelector(".file-text");
+  const n=input.files.length;
+  t.textContent=n?(n>MAX_FOTOS?MAX_FOTOS+" fotos (solo se envían las 6 primeras)":n+(n===1?" foto seleccionada":" fotos seleccionadas")):"Añadir fotos";
+  form.querySelector(".file-drop").classList.toggle("has-files",n>0);
+}
+document.querySelectorAll('.lead-form input[type="file"]').forEach(i=>i.addEventListener("change",()=>updateFiles(i.form)));
+
+async function compress(file){
+  try{
+    const bmp=await createImageBitmap(file);
+    const scale=Math.min(1,1600/Math.max(bmp.width,bmp.height));
+    const c=document.createElement("canvas");
+    c.width=Math.round(bmp.width*scale); c.height=Math.round(bmp.height*scale);
+    c.getContext("2d").drawImage(bmp,0,0,c.width,c.height);
+    const blob=await new Promise(r=>c.toBlob(r,"image/jpeg",.82));
+    if(blob && blob.size<file.size) return blob;
+  }catch(e){}
+  return file.size<=8*1048576?file:null;
+}
+
+document.querySelectorAll(".lead-form").forEach(form=>{
+  form.querySelector("[data-wa-send]").addEventListener("click",()=>wa(waMessage(form)));
+
+  form.addEventListener("submit",async e=>{
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    const btn=form.querySelector(".modal-submit");
+    const fd=new FormData(form);
+    fd.set("t",form.dataset.t||"0");
+    const input=form.querySelector('input[type="file"]');
+    if(input){
+      fd.delete("fotos[]");
+      const files=[...input.files].slice(0,MAX_FOTOS);
+      if(files.length) setStatus(form,"Preparando fotos…");
+      for(let i=0;i<files.length;i++){
+        const out=await compress(files[i]);
+        if(out) fd.append("fotos[]",out,"foto-"+(i+1)+(out===files[i]?"":".jpg"));
+      }
+    }
+    btn.disabled=true; btn.textContent="ENVIANDO…";
+    setStatus(form,"Enviando tu solicitud…");
+    try{
+      const res=await fetch("enviar.php",{method:"POST",body:fd});
+      const data=await res.json().catch(()=>({ok:false}));
+      if(data.ok){
+        form.hidden=true;
+        form.closest(".modal-card").querySelector(".form-ok").hidden=false;
+      }else{
+        setStatus(form,(data.mensaje||"No se ha podido enviar.")+" También puedes enviarlo por WhatsApp.","error");
+      }
+    }catch(err){
+      setStatus(form,"No hay conexión ahora mismo. Prueba de nuevo o envíalo por WhatsApp.","error");
+    }finally{
+      btn.disabled=false; btn.textContent="ENVIAR SOLICITUD";
+    }
+  });
 });
 </script>
 
