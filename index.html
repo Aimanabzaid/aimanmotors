@@ -628,6 +628,121 @@
     .form-ok p{color:#aaa;max-width:420px;margin:0 auto 22px}
     .ok-icon{width:56px;height:56px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-size:1.6rem;font-weight:900;margin:auto}
 
+    [hidden]{display:none !important}
+
+    /* SIMULADOR */
+    .sim{margin-top:14px;border:1px solid var(--line);border-radius:28px;background:var(--card);padding:34px}
+    .sim-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}
+    .sim-head h3,.referral h3{margin:0;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:1;letter-spacing:-.04em;font-stretch:112%}
+    .sim-head p{margin:0;color:var(--muted);max-width:320px}
+    .sim-body{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+    .sim-inputs{display:grid;gap:22px;align-content:start}
+    .sim-label{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;font-weight:700;font-size:.95rem}
+    .sim-val{display:inline-flex;align-items:center;gap:6px;color:#bbb;font-weight:700;white-space:nowrap}
+    .sim-val input{width:74px;text-align:right;border:1px solid #2b2b2b;background:#080808;color:#fff;border-radius:10px;padding:8px 10px;font:inherit;font-weight:800}
+    .sim input[type=range]{width:100%;accent-color:#fff;height:28px;cursor:pointer}
+    .sim-results{border:1px solid var(--line);border-radius:22px;background:#0d0d0d;padding:26px;display:flex;flex-direction:column;gap:16px}
+    .sim-main small{display:block;color:var(--muted)}
+    .sim-main strong{display:block;font-size:clamp(2.6rem,6vw,3.8rem);line-height:1;letter-spacing:-.05em;font-weight:900;margin:6px 0 4px;font-stretch:112%}
+    .sim-bar{display:flex;height:10px;border-radius:99px;overflow:hidden;background:#222}
+    .sim-bar .b-owner{background:#fff;transition:width .25s}
+    .sim-bar .b-am{background:#6d6d6d;transition:width .25s}
+    .sim-rows{margin:0;display:grid;gap:10px}
+    .sim-rows div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #1f1f1f;padding-bottom:10px}
+    .sim-rows dt{color:#bbb}
+    .sim-rows dt span{color:#777}
+    .sim-rows dd{margin:0;font-weight:800;white-space:nowrap}
+    .sim-formula{margin:0;color:#888;font-size:.9rem}
+    .sim-note{margin:18px 0 0;color:#9a9a9a;font-size:.88rem;border-left:2px solid #555;padding-left:12px}
+    .sim-note strong{color:#ddd}
+    .sim-cta{margin-top:20px}
+    .sim-cta .btn{text-align:center}
+
+    /* REFERIDOS */
+    .referral{margin-top:14px;border:1px solid var(--line);border-radius:28px;background:var(--card);padding:34px;display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+    .referral-copy p{color:var(--muted)}
+    .referral-reward{font-size:.9rem;color:#9a9a9a !important;border-left:2px solid #555;padding-left:12px}
+    .referral-box{border:1px solid var(--line);border-radius:22px;background:#0d0d0d;padding:24px}
+    .ref-form .modal-field input{width:100%}
+    .ref-result{display:flex;flex-direction:column;gap:12px}
+    .ref-result small{color:var(--muted)}
+    .ref-code{font-size:2rem;letter-spacing:.08em;font-weight:900}
+    .ref-link{display:flex;gap:8px}
+    .ref-link input{flex:1;min-width:0;border:1px solid #2b2b2b;background:#080808;color:#ddd;border-radius:13px;padding:12px;font:inherit;font-size:.85rem}
+    .ref-link .btn{padding:12px 16px}
+    .ref-toast{position:fixed;left:50%;transform:translateX(-50%);bottom:86px;z-index:150;width:min(520px,calc(100% - 28px));background:#fff;color:#000;border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 18px 50px rgba(0,0,0,.45);font-size:.9rem}
+    .ref-toast[hidden]{display:none}
+    .ref-toast strong{white-space:nowrap}
+    .ref-toast button{border:0;background:none;font-size:1rem;cursor:pointer;padding:4px}
+    .ref-note{margin:14px 0 0;border:1px solid #2f2f2f;border-radius:12px;padding:10px 12px;color:#ddd;font-size:.88rem}
+    .owner .owner-update{text-align:center;color:#9a9a9a;margin:16px auto 0;max-width:none;font-size:.92rem}
+    .owner-update a{color:#fff;text-decoration:underline;font-weight:700}
+
+    /* PREEVALUACIÓN */
+    .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+    .wizard fieldset{border:0;margin:0;padding:0;min-width:0}
+    .wz-progress{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;margin-bottom:20px;font-size:.85rem}
+    .wz-count{font-weight:800}
+    .wz-name{color:#999;text-align:right}
+    .wz-bar{grid-column:1/-1;height:4px;background:#222;border-radius:9px;overflow:hidden}
+    .wz-bar i{display:block;height:100%;width:25%;background:#fff;transition:width .25s}
+    .q{margin-bottom:18px}
+    .q-label{display:block;font-size:.82rem;color:#bbb;font-weight:700;margin-bottom:8px}
+    .q-help{color:#999;font-size:.88rem;margin:14px 0 10px}
+    .choice{display:flex;flex-wrap:wrap;gap:8px}
+    .choice label{position:relative;cursor:pointer}
+    .choice input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+    .choice span{display:inline-block;border:1px solid #333;border-radius:999px;padding:10px 15px;font-weight:700;font-size:.9rem;color:#ddd;transition:.15s}
+    .choice input:checked + span{background:#fff;color:#000;border-color:#fff}
+    .choice input:focus-visible + span{outline:2px solid #fff;outline-offset:2px}
+    .wz-nav{display:flex;gap:10px;margin-top:20px}
+    .wz-nav .btn{flex:1}
+    .wz-nav [hidden]{display:none}
+    .wz-legal{color:#888;font-size:.82rem;margin:12px 0 0}
+    .ok-ref{display:block;font-size:1.6rem;letter-spacing:.06em;font-weight:900;margin:-8px 0 14px}
+    .ok-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+    /* CALENDARIO */
+    .cal{border:1px solid #2b2b2b;border-radius:18px;background:#080808;padding:14px}
+    .cal-wrap{margin-top:16px}
+    .cal-modes{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px}
+    .cal-mode{display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid #333;background:transparent;color:#ccc;border-radius:999px;padding:9px 10px;font:inherit;font-size:.85rem;font-weight:800;cursor:pointer}
+    .cal-mode.active{background:#fff;color:#000;border-color:#fff}
+    .lg{display:inline-block;width:12px;height:12px;border-radius:4px;border:1px solid #555}
+    .lg.on{background:#fff;border-color:#fff}
+    .cal-mode.active .lg.on{border-color:#000}
+    .lg.off{background:repeating-linear-gradient(135deg,#555 0 2px,#1a1a1a 2px 5px)}
+    .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+    .cal-title{text-transform:capitalize}
+    .cal-nav{width:36px;height:36px;border-radius:50%;border:1px solid #333;background:#111;color:#fff;font-size:1.2rem;cursor:pointer}
+    .cal-nav:disabled{opacity:.3;cursor:default}
+    .cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+    .cal-dow span{text-align:center;font-size:.72rem;color:#777;font-weight:700;padding:4px 0}
+    .cal-day{aspect-ratio:1;border:1px solid #222;background:#101010;color:#ddd;border-radius:10px;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;padding:0;min-height:36px}
+    .cal-day:hover{border-color:#666}
+    .cal-day.on{background:#fff;color:#000;border-color:#fff}
+    .cal-day.off{background:repeating-linear-gradient(135deg,#3a3a3a 0 2px,#151515 2px 6px);color:#888;border-color:#333;text-decoration:line-through}
+    .cal-day:disabled{opacity:.25;cursor:default}
+    .cal-day.empty{visibility:hidden}
+    .cal-day.today{box-shadow:inset 0 0 0 1px #888}
+    .cal-tools{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+    .cal-tools button{border:1px solid #333;background:transparent;color:#ccc;border-radius:999px;padding:8px 12px;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
+    .cal-tools button:hover{border-color:#777;color:#fff}
+    .cal-summary{margin:10px 0 0;color:#aaa;font-size:.85rem}
+
+    @media(max-width:900px){
+      .sim-body,.referral{grid-template-columns:1fr}
+      .sim-head{flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:560px){
+      .sim,.referral{padding:22px}
+      .sim-results,.referral-box{padding:18px}
+      .sim-cta .btn{width:100%}
+      .ref-link{flex-direction:column}
+      .cal{padding:10px}
+      .cal-dow,.cal-grid{gap:3px}
+    }
+
     /* OPINIONES */
     .opiniones{padding-top:0}
     .rating{display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:var(--card);border-radius:20px;padding:16px 22px;white-space:nowrap}
@@ -700,7 +815,7 @@
       left:18px;
       bottom:18px;
       width:min(430px,calc(100% - 36px));
-      z-index:300;
+      z-index:190;
       background:rgba(14,14,14,.98);
       border:1px solid #313131;
       border-radius:20px;
@@ -1092,10 +1207,88 @@
         <div class="owner-step"><div class="num">4</div><strong>Gestionamos el alquiler</strong><span>Coordinamos las reservas y te mantenemos informado.</span></div>
       </div>
 
+
+      <div class="sim" id="simulador">
+        <div class="sim-head">
+          <div>
+            <div class="eyebrow">Simulador de ingresos</div>
+            <h3>¿Cuánto podría generar tu coche?</h3>
+          </div>
+          <p>Ajusta los valores y mira una estimación al momento.</p>
+        </div>
+        <div class="sim-body">
+          <div class="sim-inputs">
+            <div class="sim-field">
+              <div class="sim-label"><label for="simPrecio">Precio de alquiler por día</label><span class="sim-val"><input id="simPrecioN" type="number" inputmode="decimal" min="1" max="1000" step="any" aria-label="Precio por día en euros"> €</span></div>
+              <input id="simPrecio" type="range" min="10" max="200" step="1">
+            </div>
+            <div class="sim-field">
+              <div class="sim-label"><label for="simDias">Días disponibles al mes</label><span class="sim-val"><input id="simDiasN" type="number" inputmode="numeric" min="1" max="31" step="1" aria-label="Días al mes"> días</span></div>
+              <input id="simDias" type="range" min="1" max="31" step="1">
+            </div>
+            <div class="sim-field">
+              <div class="sim-label"><label for="simAiman">Porcentaje de Aiman Motors</label><span class="sim-val"><input id="simAimanN" type="number" inputmode="numeric" min="0" max="100" step="1" aria-label="Porcentaje de Aiman Motors"> %</span></div>
+              <input id="simAiman" type="range" min="0" max="100" step="1">
+            </div>
+            <div class="sim-field">
+              <div class="sim-label"><label for="simProp">Porcentaje del propietario</label><span class="sim-val"><input id="simPropN" type="number" inputmode="numeric" min="0" max="100" step="1" aria-label="Porcentaje del propietario"> %</span></div>
+              <input id="simProp" type="range" min="0" max="100" step="1">
+            </div>
+          </div>
+          <div class="sim-results" aria-live="polite">
+            <div class="sim-main">
+              <small>Ingresos estimados del propietario</small>
+              <strong data-out="owner">—</strong>
+              <small>al mes</small>
+            </div>
+            <div class="sim-bar" aria-hidden="true"><span class="b-owner"></span><span class="b-am"></span></div>
+            <dl class="sim-rows">
+              <div><dt>Facturación bruta estimada</dt><dd data-out="gross">—</dd></div>
+              <div><dt>Comisión de Aiman Motors <span data-out="pa"></span></dt><dd data-out="am">—</dd></div>
+              <div><dt>Ingresos del propietario <span data-out="pp"></span></dt><dd data-out="owner2">—</dd></div>
+            </dl>
+            <p class="sim-formula" data-out="formula"></p>
+          </div>
+        </div>
+        <p class="sim-note"><strong>Simulación orientativa.</strong> No es una oferta ni una garantía de ingresos: el resultado real depende de la demanda, la temporada y las condiciones que acordemos contigo. Los porcentajes son de ejemplo y no reflejan una comisión definitiva. No se descuentan impuestos, seguros ni otros gastos.</p>
+        <div class="sim-cta"><a class="btn" href="#propietarios" data-open-modal="ownerModal">QUIERO QUE EVALUÉIS MI COCHE</a></div>
+      </div>
+
+      <div class="referral" id="recomienda">
+        <div class="referral-copy">
+          <div class="eyebrow">Programa de recomendaciones</div>
+          <h3>¿Conoces a otro propietario?</h3>
+          <p>Recomiéndanos. Te damos un código personal y un enlace para compartir. Si esa persona nos presenta su coche, quedará registrado que llega de tu parte.</p>
+          <p class="referral-reward" data-reward></p>
+        </div>
+        <div class="referral-box">
+          <form id="refForm" class="ref-form" novalidate>
+            <input type="hidden" name="tipo" value="referido">
+            <div class="hp" aria-hidden="true"><label>No rellenar<input name="website" tabindex="-1" autocomplete="off"></label></div>
+            <div class="modal-grid">
+              <div class="modal-field"><label for="rNombre">Tu nombre</label><input id="rNombre" name="nombre" autocomplete="name" required maxlength="100" placeholder="Tu nombre"></div>
+              <div class="modal-field"><label for="rTelefono">Tu teléfono</label><input id="rTelefono" name="telefono" type="tel" autocomplete="tel" required maxlength="30" placeholder="6XX XXX XXX"></div>
+              <div class="modal-field full"><label for="rSolicitud">Referencia de tu solicitud <span class="opt">(si ya nos enviaste tu coche)</span></label><input id="rSolicitud" name="solicitud" maxlength="20" autocapitalize="characters" placeholder="AM-261106-K7QX"></div>
+            </div>
+            <label class="consent"><input type="checkbox" name="privacidad" value="1" required> <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span></label>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <button class="btn modal-submit" type="submit">CREAR MI ENLACE</button>
+          </form>
+          <div class="ref-result" hidden>
+            <small>Tu código</small>
+            <strong class="ref-code" data-ref-code></strong>
+            <div class="ref-link"><input data-ref-link readonly aria-label="Tu enlace para compartir"><button type="button" class="btn dark" data-ref-copy>COPIAR</button></div>
+            <button type="button" class="btn" data-ref-share>COMPARTIR POR WHATSAPP</button>
+            <p class="form-status" data-ref-msg></p>
+          </div>
+        </div>
+      </div>
+
       <div class="owner-cta-row">
         <a class="btn" href="#propietarios" data-open-modal="ownerModal">QUIERO ALQUILAR MI COCHE</a>
         <a class="btn dark" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20tengo%20un%20coche%20y%20quiero%20alquilarlo%20con%20vosotros." target="_blank" rel="noopener">CONSULTAR POR WHATSAPP</a>
       </div>
+      <p class="owner-update">¿Ya nos enviaste tu coche? <a href="#propietarios" data-open-modal="dispModal">Actualiza tu disponibilidad</a></p>
     </div>
   </section>
 
@@ -1370,25 +1563,72 @@
   <div class="modal-card">
     <div class="modal-top">
       <div>
-        <h3 id="ownerModalTitle">Quiero alquilar mi coche</h3>
-        <p>Cuéntanos qué coche tienes. Lo valoramos y te explicamos las condiciones, sin compromiso.</p>
+        <h3 id="ownerModalTitle">Preevaluación de tu coche</h3>
+        <p>4 pasos rápidos. Revisamos cada caso personalmente y te contactamos, sin compromiso.</p>
       </div>
       <button class="modal-close" type="button" data-close-modal aria-label="Cerrar">✕</button>
     </div>
 
-    <form id="ownerForm" class="lead-form" data-tipo="propietario" data-wa-intro="Hola Aiman Motors, quiero alquilar mi coche." enctype="multipart/form-data">
+    <form id="ownerForm" class="wizard" enctype="multipart/form-data" novalidate>
       <input type="hidden" name="tipo" value="propietario">
+      <input type="hidden" name="ref" value="">
       <div class="hp" aria-hidden="true"><label>No rellenar<input name="website" tabindex="-1" autocomplete="off"></label></div>
-      <div class="modal-grid">
-        <div class="modal-field"><label for="oNombre">Nombre</label><input id="oNombre" name="nombre" autocomplete="name" required maxlength="100" placeholder="Tu nombre"></div>
-        <div class="modal-field"><label for="oTelefono">Teléfono</label><input id="oTelefono" name="telefono" type="tel" autocomplete="tel" required maxlength="30" placeholder="6XX XXX XXX"></div>
-        <div class="modal-field"><label for="oMarca">Marca</label><input id="oMarca" name="marca" required maxlength="60" placeholder="Volkswagen"></div>
-        <div class="modal-field"><label for="oModelo">Modelo</label><input id="oModelo" name="modelo" required maxlength="60" placeholder="Golf"></div>
-        <div class="modal-field"><label for="oAno">Año</label><input id="oAno" name="ano" inputmode="numeric" maxlength="10" placeholder="2020"></div>
-        <div class="modal-field"><label for="oKm">Kilometraje</label><input id="oKm" name="km" inputmode="numeric" maxlength="20" placeholder="75.000 km"></div>
-        <div class="modal-field"><label for="oCiudad">Ciudad</label><input id="oCiudad" name="ciudad" autocomplete="address-level2" required maxlength="60" placeholder="Madrid"></div>
-        <div class="modal-field">
-          <label for="oDisp">Disponibilidad</label>
+      <div class="wz-progress"><span class="wz-count">Paso 1 de 4</span><span class="wz-name"></span><div class="wz-bar"><i></i></div></div>
+
+      <fieldset class="wz-step" data-name="Tu coche">
+        <legend class="sr">Tu coche</legend>
+        <div class="modal-grid">
+          <div class="modal-field"><label for="oMarca">Marca</label><input id="oMarca" name="marca" required maxlength="60" placeholder="Volkswagen"></div>
+          <div class="modal-field"><label for="oModelo">Modelo</label><input id="oModelo" name="modelo" required maxlength="60" placeholder="Golf"></div>
+          <div class="modal-field"><label for="oAno">Año de matriculación</label><input id="oAno" name="ano" inputmode="numeric" maxlength="4" pattern="(19|20)[0-9]{2}" placeholder="2020"></div>
+          <div class="modal-field"><label for="oKm">Kilometraje</label><input id="oKm" name="km" inputmode="numeric" maxlength="20" placeholder="75.000 km"></div>
+          <div class="modal-field"><label for="oCiudad">Ciudad</label><input id="oCiudad" name="ciudad" autocomplete="address-level2" required maxlength="60" placeholder="Madrid"></div>
+          <div class="modal-field">
+            <label for="oComb">Combustible</label>
+            <select id="oComb" name="combustible" required>
+              <option value="">Elige una opción</option>
+              <option>Gasolina</option><option>Diésel</option><option>Híbrido</option><option>Híbrido enchufable</option><option>Eléctrico</option><option>GLP / GNC</option><option>Otro</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="wz-step" data-name="Estado" hidden>
+        <legend class="sr">Estado del vehículo</legend>
+        <div class="q"><span class="q-label">Estado general</span>
+            <div class="choice" role="radiogroup">
+              <label><input type="radio" name="estado" value="Muy bueno" required><span>Muy bueno</span></label>
+              <label><input type="radio" name="estado" value="Bueno"><span>Bueno</span></label>
+              <label><input type="radio" name="estado" value="Regular"><span>Regular</span></label>
+              <label><input type="radio" name="estado" value="Necesita reparaciones"><span>Necesita reparaciones</span></label>
+            </div>
+        </div>
+        <div class="q"><span class="q-label">¿Tiene la ITV en vigor?</span>
+            <div class="choice" role="radiogroup">
+              <label><input type="radio" name="itv" value="Sí" required><span>Sí</span></label>
+              <label><input type="radio" name="itv" value="No"><span>No</span></label>
+              <label><input type="radio" name="itv" value="No lo sé"><span>No lo sé</span></label>
+            </div>
+        </div>
+        <div class="q"><span class="q-label">¿Tiene seguro vigente?</span>
+            <div class="choice" role="radiogroup">
+              <label><input type="radio" name="seguro" value="Sí" required><span>Sí</span></label>
+              <label><input type="radio" name="seguro" value="No"><span>No</span></label>
+            </div>
+        </div>
+        <div class="q"><span class="q-label">¿Tiene averías o daños?</span>
+            <div class="choice" role="radiogroup">
+              <label><input type="radio" name="danos" value="No" required><span>No</span></label>
+              <label><input type="radio" name="danos" value="Sí"><span>Sí</span></label>
+            </div>
+        </div>
+        <div class="modal-field full" data-danos-detalle hidden><label for="oDanos">¿Qué averías o daños tiene?</label><textarea id="oDanos" name="danos_detalle" maxlength="1000" placeholder="Golpe en la puerta trasera, testigo de motor encendido…"></textarea></div>
+      </fieldset>
+
+      <fieldset class="wz-step" data-name="Disponibilidad" hidden>
+        <legend class="sr">Disponibilidad</legend>
+        <div class="modal-field full">
+          <label for="oDisp">¿Cuándo podría estar disponible?</label>
           <select id="oDisp" name="disponibilidad" required>
             <option value="">Elige una opción</option>
             <option>Todo el año</option>
@@ -1398,25 +1638,121 @@
             <option>Aún no lo sé</option>
           </select>
         </div>
-        <div class="modal-field full">
-          <label for="oFotos">Fotos del coche <span class="opt">(opcional)</span></label>
-          <input id="oFotos" name="fotos[]" type="file" accept="image/*" multiple class="file-input">
-          <label class="file-drop" for="oFotos"><span class="file-text">Añadir fotos</span><small>Hasta 6. Nos ayudan a valorar tu coche más rápido.</small></label>
+        <p class="q-help">Si ya sabes qué días puedes dejarlo, márcalos en el calendario <span class="opt">(opcional)</span>. Podrás cambiarlos más adelante.</p>
+        <div class="cal" id="ownerCal" data-cal>
+            <div class="cal-modes" role="group" aria-label="Qué quieres marcar">
+              <button type="button" class="cal-mode active" data-mode="on" aria-pressed="true"><i class="lg on"></i>Disponible</button>
+              <button type="button" class="cal-mode" data-mode="off" aria-pressed="false"><i class="lg off"></i>No disponible</button>
+            </div>
+            <div class="cal-head">
+              <button type="button" class="cal-nav" data-prev aria-label="Mes anterior">‹</button>
+              <strong class="cal-title" aria-live="polite"></strong>
+              <button type="button" class="cal-nav" data-next aria-label="Mes siguiente">›</button>
+            </div>
+            <div class="cal-dow" aria-hidden="true"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+            <div class="cal-grid"></div>
+            <div class="cal-tools">
+              <button type="button" data-fill="weekends">Fines de semana</button>
+              <button type="button" data-fill="month">Todo el mes</button>
+              <button type="button" data-fill="clear">Borrar mes</button>
+            </div>
+            <p class="cal-summary" aria-live="polite"></p>
+          </div>
+      </fieldset>
+
+      <fieldset class="wz-step" data-name="Fotos y contacto" hidden>
+        <legend class="sr">Fotos y contacto</legend>
+        <div class="modal-grid">
+          <div class="modal-field full">
+            <label for="oFotos">Fotos del coche <span class="opt">(opcional)</span></label>
+            <input id="oFotos" name="fotos[]" type="file" accept="image/*" multiple class="file-input">
+            <label class="file-drop" for="oFotos"><span class="file-text">Añadir fotos</span><small>Hasta 6: exterior, interior y cuentakilómetros.</small></label>
+          </div>
+          <div class="modal-field"><label for="oNombre">Nombre</label><input id="oNombre" name="nombre" autocomplete="name" required maxlength="100" placeholder="Tu nombre"></div>
+          <div class="modal-field"><label for="oTelefono">Teléfono</label><input id="oTelefono" name="telefono" type="tel" autocomplete="tel" required maxlength="30" placeholder="6XX XXX XXX"></div>
+          <div class="modal-field full"><label for="oComent">Comentarios <span class="opt">(opcional)</span></label><textarea id="oComent" name="comentarios" maxlength="2000" placeholder="Cuándo lo usas, dudas…"></textarea></div>
         </div>
-        <div class="modal-field full"><label for="oComent">Comentarios <span class="opt">(opcional)</span></label><textarea id="oComent" name="comentarios" maxlength="2000" placeholder="Estado del coche, cuándo lo usas, dudas…"></textarea></div>
+        <p class="ref-note" data-ref-note hidden></p>
+        <label class="consent"><input type="checkbox" name="privacidad" value="1" required> <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span></label>
+        <p class="wz-legal">La aceptación definitiva de cada vehículo la decide Aiman Motors después de revisar el caso.</p>
+      </fieldset>
+
+      <p class="form-status" role="status" aria-live="polite"></p>
+      <div class="wz-nav">
+        <button class="btn dark" type="button" data-wz-prev hidden>ATRÁS</button>
+        <button class="btn" type="button" data-wz-next>SIGUIENTE</button>
+        <button class="btn" type="submit" data-wz-submit hidden>ENVIAR SOLICITUD</button>
+      </div>
+      <button class="wa-alt" type="button" data-wz-wa>¿Lo prefieres por WhatsApp? Envíalo por ahí →</button>
+    </form>
+
+    <div class="form-ok" hidden>
+      <div class="ok-icon" aria-hidden="true">✓</div>
+      <h3>¡Solicitud recibida!</h3>
+      <p>Tu referencia es</p>
+      <strong class="ok-ref" data-ok-ref></strong>
+      <p>Guárdala: te servirá para actualizar tu disponibilidad. Revisaremos tu coche y te contactaremos. La aceptación definitiva la decide Aiman Motors después de revisar cada caso.</p>
+      <div class="ok-actions">
+        <button class="btn" type="button" data-ok-wa>CONTINUAR POR WHATSAPP</button>
+        <button class="btn dark" type="button" data-close-modal>CERRAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="dispModal" role="dialog" aria-modal="true" aria-labelledby="dispModalTitle">
+  <div class="modal-card">
+    <div class="modal-top">
+      <div>
+        <h3 id="dispModalTitle">Actualiza tu disponibilidad</h3>
+        <p>Usa la referencia que recibiste al enviar tu coche. El nuevo calendario sustituye al anterior.</p>
+      </div>
+      <button class="modal-close" type="button" data-close-modal aria-label="Cerrar">✕</button>
+    </div>
+    <form id="dispForm" novalidate>
+      <input type="hidden" name="tipo" value="disponibilidad">
+      <div class="hp" aria-hidden="true"><label>No rellenar<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="modal-grid">
+        <div class="modal-field"><label for="dRef">Referencia</label><input id="dRef" name="referencia" required maxlength="20" autocapitalize="characters" pattern="[Aa][Mm]-[0-9]{6}-[A-Za-z0-9]{4}" placeholder="AM-261106-K7QX"></div>
+        <div class="modal-field"><label for="dTel">Teléfono de la solicitud</label><input id="dTel" name="telefono" type="tel" autocomplete="tel" required maxlength="30" placeholder="6XX XXX XXX"></div>
+      </div>
+      <div class="cal-wrap">
+        <div class="cal" id="dispCal" data-cal>
+            <div class="cal-modes" role="group" aria-label="Qué quieres marcar">
+              <button type="button" class="cal-mode active" data-mode="on" aria-pressed="true"><i class="lg on"></i>Disponible</button>
+              <button type="button" class="cal-mode" data-mode="off" aria-pressed="false"><i class="lg off"></i>No disponible</button>
+            </div>
+            <div class="cal-head">
+              <button type="button" class="cal-nav" data-prev aria-label="Mes anterior">‹</button>
+              <strong class="cal-title" aria-live="polite"></strong>
+              <button type="button" class="cal-nav" data-next aria-label="Mes siguiente">›</button>
+            </div>
+            <div class="cal-dow" aria-hidden="true"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+            <div class="cal-grid"></div>
+            <div class="cal-tools">
+              <button type="button" data-fill="weekends">Fines de semana</button>
+              <button type="button" data-fill="month">Todo el mes</button>
+              <button type="button" data-fill="clear">Borrar mes</button>
+            </div>
+            <p class="cal-summary" aria-live="polite"></p>
+          </div>
       </div>
       <label class="consent"><input type="checkbox" name="privacidad" value="1" required> <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span></label>
       <p class="form-status" role="status" aria-live="polite"></p>
-      <button class="btn modal-submit" type="submit">ENVIAR SOLICITUD</button>
-      <button class="wa-alt" type="button" data-wa-send>¿Lo prefieres por WhatsApp? Envíalo por ahí →</button>
+      <button class="btn modal-submit" type="submit">GUARDAR DISPONIBILIDAD</button>
     </form>
     <div class="form-ok" hidden>
       <div class="ok-icon" aria-hidden="true">✓</div>
-      <h3>¡Solicitud enviada!</h3>
-      <p>Hemos recibido los datos de tu coche. Te contactamos lo antes posible para hacer la evaluación previa y explicarte las condiciones.</p>
+      <h3>¡Disponibilidad actualizada!</h3>
+      <p>Hemos recibido tu nuevo calendario. Si cambia algo más, puedes volver a actualizarlo cuando quieras.</p>
       <button class="btn" type="button" data-close-modal>CERRAR</button>
     </div>
   </div>
+</div>
+
+<div class="ref-toast" id="refToast" role="status" hidden>
+  <span>Llegas recomendado por un propietario (<strong data-toast-code></strong>). Lo tendremos en cuenta en tu solicitud.</span>
+  <button type="button" aria-label="Cerrar aviso" data-toast-close>✕</button>
 </div>
 
 <script>
@@ -1603,5 +1939,6 @@ document.querySelectorAll(".lead-form").forEach(form=>{
 })();
 </script>
 
+<script src="propietarios.js" defer></script>
 </body>
 </html>
