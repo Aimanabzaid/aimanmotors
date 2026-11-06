@@ -22,6 +22,8 @@
     nav{border-bottom:1px solid var(--line);background:#0b0b0b}
     .nav-inner{height:74px;display:flex;align-items:center;justify-content:space-between;gap:16px}
     .logo{display:inline-flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:900;letter-spacing:.18em;white-space:nowrap;text-decoration:none;font-stretch:112%}
+    .logo img{display:block;height:30px;width:auto}
+    @media(max-width:520px){.logo img{height:24px}}
     .logo-light{font-weight:400;color:#bdbdbd;margin-left:-2px}
     .logo-mark{width:22px;height:22px;border:2px solid #fff;border-radius:6px;position:relative;transform:skewX(-12deg)}
     .logo-mark::after{content:"";position:absolute;inset:5px 4px;background:#fff;border-radius:2px}
@@ -53,7 +55,7 @@
 <body>
 <nav>
   <div class="wrap nav-inner">
-    <a class="logo" href="./" aria-label="Aiman Motors, inicio"><span class="logo-mark" aria-hidden="true"></span>AIMAN<span class="logo-light">MOTORS</span></a>
+    <a class="logo" href="./" aria-label="Aimán Motors Spain, inicio"><img src="logo-aiman-motors.png" alt="Aimán Motors Spain" width="900" height="159"></a>
     <a class="back" href="./">← Volver<span class="hide-sm"> a la web</span></a>
   </div>
 </nav>
