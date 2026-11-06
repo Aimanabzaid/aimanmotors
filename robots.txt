@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /enviar.php
+Disallow: /docs/
+
+Sitemap: https://aimanmotors.com/sitemap.xml
