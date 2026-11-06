@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aiman Motors Spain | Gestión del alquiler de tu coche en Madrid y Marbella</title>
-  <meta name="description" content="¿Tienes un coche parado? Puede generar ingresos. Aiman Motors Spain gestiona el alquiler de vehículos de propietarios particulares en Madrid y Marbella. También coches a la carta, importación y revisiones.">
+  <title>Aiman Motors Spain | Alquiler de tu coche y coches a la carta en Madrid y Marbella</title>
+  <meta name="description" content="Aiman Motors Spain: gestionamos el alquiler de tu coche cuando no lo usas y buscamos coches a la carta en España y Europa. Madrid y Marbella. Instagram @aimanmotorsspain.">
   <style>
     :root{
       --bg:#070707;
@@ -630,6 +630,37 @@
 
     [hidden]{display:none !important}
 
+    /* PORTADA: dos caminos */
+    .hero h1{font-size:clamp(3rem,6.4vw,5.8rem)}
+    .paths{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 26px;max-width:760px}
+    .path{display:flex;flex-direction:column;gap:6px;border:1px solid rgba(255,255,255,.18);background:rgba(10,10,10,.72);backdrop-filter:blur(8px);border-radius:22px;padding:22px;transition:.2s}
+    .path:hover{border-color:#fff;transform:translateY(-2px)}
+    .path small{color:#bdbdbd;font-size:.85rem}
+    .path strong{font-size:1.6rem;letter-spacing:-.03em;line-height:1.05;font-stretch:112%}
+    .path span{color:#cfcfcf;font-size:.95rem}
+    .path em{font-style:normal;font-weight:900;font-size:.85rem;margin-top:8px}
+    .path:first-child{background:#fff;color:#070707;border-color:#fff}
+    .path:first-child small,.path:first-child span{color:#444}
+
+    /* REDES */
+    .social{display:flex;flex-wrap:wrap;gap:10px}
+    .social a{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.2);background:rgba(10,10,10,.6);border-radius:999px;padding:10px 15px 10px 12px;font-weight:800;font-size:.9rem;color:#eee}
+    .social a:hover{border-color:#fff;color:#fff}
+    .social svg,.contact-link svg{width:20px;height:20px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round}
+    .social svg .dot,.contact-link svg .dot{fill:currentColor;stroke:none}
+    .contact-link{display:inline-flex;align-items:center;gap:8px}
+    .contact-link svg{width:17px;height:17px}
+    .follow{margin-top:56px}
+    .big-social{justify-content:center}
+    .big-social a{padding:14px 20px 14px 16px;font-size:1rem}
+    @media(max-width:620px){
+      .paths{grid-template-columns:1fr}
+      .hero-social{display:grid;grid-template-columns:1fr 1fr}
+      .hero-social a{justify-content:center}
+      .big-social{display:grid;grid-template-columns:1fr}
+      .big-social a{justify-content:center}
+    }
+
     /* SIMULADOR */
     .sim{margin-top:14px;border:1px solid var(--line);border-radius:28px;background:var(--card);padding:34px}
     .sim-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}
@@ -917,7 +948,7 @@
       "https://www.instagram.com/aimanmotorsspain/",
       "https://www.facebook.com/aimanmotorsspain"
     ],
-    "description":"Gestión del alquiler de vehículos de propietarios particulares en Madrid y Marbella. Además, coches a la carta con importación desde Europa, revisión precompra y mantenimiento."
+    "description":"Gestión del alquiler de vehículos de propietarios particulares y coches a la carta con importación desde Europa, en Madrid y Marbella. También revisión precompra y mantenimiento."
   }
   </script>
 
@@ -1072,29 +1103,44 @@
 <header class="hero">
   <div class="wrap">
     <div class="hero-content">
-      <div class="eyebrow">Gestión de alquiler para propietarios · Madrid · Marbella</div>
-      <h1>¿TIENES UN<br>COCHE<br>PARADO?</h1>
-      <div class="hero-sub">Puede generar ingresos.</div>
+      <div class="eyebrow">Aiman Motors Spain · Madrid · Marbella</div>
+      <h1>ALQUILA<br>TU COCHE.<br>ENCUENTRA<br>EL TUYO.</h1>
       <p>
-        Gestionamos el alquiler de coches de propietarios particulares: evaluamos tu vehículo, acordamos las condiciones contigo y coordinamos cada reserva.
+        Dos servicios, un mismo trato directo: gestionamos el alquiler de tu coche cuando no lo usas
+        y buscamos el coche que necesitas, en España o importado de Europa.
       </p>
 
-      <div class="hero-actions">
-        <a class="btn" href="#propietarios" data-open-modal="ownerModal">QUIERO ALQUILAR MI COCHE</a>
-        <a class="btn dark" href="#carta" data-open-modal="carModal">BUSCAR MI COCHE</a>
+      <div class="paths">
+        <a class="path" href="#propietarios" data-open-modal="ownerModal">
+          <small>¿Tienes un coche parado?</small>
+          <strong>Alquila tu coche</strong>
+          <span>Puede generar ingresos. Nosotros gestionamos el alquiler.</span>
+          <em>QUIERO ALQUILAR MI COCHE →</em>
+        </a>
+        <a class="path" href="#carta" data-open-modal="carModal">
+          <small>¿Buscas coche?</small>
+          <strong>Coches a la carta</strong>
+          <span>Lo buscamos, revisamos y gestionamos por ti. España y Europa.</span>
+          <em>BUSCAR MI COCHE →</em>
+        </a>
       </div>
 
-      <a class="mini-link" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20tengo%20un%20coche%20y%20quiero%20alquilarlo%20con%20vosotros." target="_blank" rel="noopener">¿Prefieres hablar? Escríbenos por WhatsApp →</a>
+      <div class="social hero-social">
+        <a href="https://www.instagram.com/aimanmotorsspain/" target="_blank" rel="noopener" aria-label="Instagram de Aiman Motors Spain"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="dot"/></svg><span>Instagram</span></a>
+        <a href="https://www.facebook.com/aimanmotorsspain" target="_blank" rel="noopener" aria-label="Facebook de Aiman Motors Spain"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg><span>Facebook</span></a>
+        <a href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener" aria-label="WhatsApp de Aiman Motors"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z" class="fill"/></svg><span>WhatsApp</span></a>
+        <a href="https://www.google.com/search?q=Aiman+Motors+Spain+rese%C3%B1as" target="_blank" rel="noopener" aria-label="Reseñas de Aiman Motors Spain en Google"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><span>Google ★ 4,6</span></a>
+      </div>
     </div>
   </div>
 </header>
 
-<section class="trust-strip" aria-label="Por qué confiar tu coche a Aiman Motors" style="padding:0">
+<section class="trust-strip" aria-label="Lo que hacemos" style="padding:0">
   <div class="wrap trust-grid">
-    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M8.5 11l2 2 3.5-4M16 16l5 5"/></svg></span><span>Evaluación previa del vehículo</span></div>
-    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></span><span>Condiciones claras y acordadas</span></div>
-    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4M9 14l2 2 4-4"/></svg></span><span>Coordinación de reservas</span></div>
-    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></span><span>Comunicación directa</span></div>
+    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4M9 14l2 2 4-4"/></svg></span><span>Gestión del alquiler de tu coche</span></div>
+    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg></span><span>Coches a la carta en España y Europa</span></div>
+    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M8.5 11l2 2 3.5-4M16 16l5 5"/></svg></span><span>Evaluación y criterio mecánico</span></div>
+    <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></span><span>Trato directo</span></div>
   </div>
 </section>
 
@@ -1308,7 +1354,7 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <div class="eyebrow">03 · Servicios</div>
+          <div class="eyebrow">03 · Otros servicios</div>
           <h2>También cuidamos de tu coche.</h2>
         </div>
         <p>Servicios complementarios, coordinados con profesionales colaboradores y con atención personalizada.</p>
@@ -1477,13 +1523,23 @@
 
   <section class="final-cta" id="contacto">
     <div class="wrap">
-      <div class="eyebrow">¿Tienes un coche parado?</div>
+      <div class="eyebrow">Alquiler · Coches a la carta</div>
       <h2>Tu próximo movimiento empieza aquí.</h2>
 
       <div class="final-actions">
         <a class="btn" href="#propietarios" data-open-modal="ownerModal">QUIERO ALQUILAR MI COCHE</a>
         <a class="btn dark" href="#carta" data-open-modal="carModal">BUSCAR MI COCHE</a>
         <a class="btn dark" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener">HABLAR POR WHATSAPP</a>
+      </div>
+
+      <div class="follow">
+        <div class="eyebrow">Síguenos</div>
+        <div class="social big-social">
+        <a href="https://www.instagram.com/aimanmotorsspain/" target="_blank" rel="noopener" aria-label="Instagram de Aiman Motors Spain"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="dot"/></svg><span>@aimanmotorsspain</span></a>
+        <a href="https://www.facebook.com/aimanmotorsspain" target="_blank" rel="noopener" aria-label="Facebook de Aiman Motors Spain"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg><span>Aiman Motors Spain</span></a>
+        <a href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener" aria-label="WhatsApp de Aiman Motors"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z" class="fill"/></svg><span>604 81 96 75</span></a>
+        <a href="https://www.google.com/search?q=Aiman+Motors+Spain+rese%C3%B1as" target="_blank" rel="noopener" aria-label="Reseñas de Aiman Motors Spain en Google"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><span>4,6 en Google</span></a>
+      </div>
       </div>
     </div>
   </section>
@@ -1494,14 +1550,14 @@
   <div class="wrap">
     <div class="footer-inner">
       <strong>AIMAN MOTORS</strong>
-      <span>Gestión de alquiler para propietarios · Madrid · Marbella</span>
+      <span>Alquiler de coches para propietarios · Coches a la carta · Madrid · Marbella</span>
       <span>© 2026 Aiman Motors Spain</span>
     </div>
     <div class="contact-links">
-      <a class="contact-link" href="https://www.instagram.com/aimanmotorsspain/" target="_blank" rel="noopener">Instagram · @aimanmotorsspain</a>
-      <a class="contact-link" href="https://www.facebook.com/aimanmotorsspain" target="_blank" rel="noopener">Facebook · Aiman Motors Spain</a>
-      <a class="contact-link" href="mailto:aimanmotorsg@gmail.com">✉ aimanmotorsg@gmail.com</a>
-      <a class="contact-link" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener">WhatsApp · 604 81 96 75</a>
+      <a class="contact-link" href="https://www.instagram.com/aimanmotorsspain/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="dot"/></svg>Instagram · @aimanmotorsspain</a>
+      <a class="contact-link" href="https://www.facebook.com/aimanmotorsspain" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg>Facebook · Aiman Motors Spain</a>
+      <a class="contact-link" href="mailto:aimanmotorsg@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>aimanmotorsg@gmail.com</a>
+      <a class="contact-link" href="https://wa.me/34604819675?text=Hola%20Aiman%20Motors%2C%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z" class="fill"/></svg>WhatsApp · 604 81 96 75</a>
     </div>
 
     <div class="legal-links">
