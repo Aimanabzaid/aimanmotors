@@ -900,6 +900,67 @@
       .cookie-banner{left:12px;bottom:12px;width:calc(100% - 24px)}
     }
 
+    /* COMPACTO */
+    .head-side{display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+    .carousel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;outline:none}
+    .carousel::-webkit-scrollbar{display:none}
+    .carousel>.real-car{flex:0 0 calc((100% - 42px)/4);scroll-snap-align:start}
+    .car-nav{display:flex;gap:8px}
+    .car-nav[hidden]{display:none}
+    .car-nav button{width:44px;height:44px;border-radius:50%;border:1px solid #333;background:#111;color:#fff;font-size:1.3rem;cursor:pointer}
+    .car-nav button:disabled{opacity:.3;cursor:default}
+    .car-nav button:not(:disabled):hover{border-color:#fff}
+
+    .owner-why{padding:30px}
+    .owner-why-head{margin-bottom:20px}
+    .why-grid{gap:18px 26px}
+    .why{border:0;background:none;padding:0;display:grid;grid-template-columns:38px 1fr;column-gap:12px;row-gap:2px;align-content:start}
+    .why-icon{width:38px;height:38px;border-radius:11px;margin:0;grid-row:span 2}
+    .why-icon svg{width:20px;height:20px}
+    .why strong{font-size:1rem;align-self:end}
+    .why span:last-child{font-size:.88rem;line-height:1.4}
+    .steps-title{margin:26px 0 14px;padding-top:24px;border-top:1px solid var(--line);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#cfcfcf}
+    .owner-why .owner-steps{margin:0;gap:18px 22px}
+    .owner-why .owner-step{padding:0;border:0;background:none;display:grid;grid-template-columns:30px 1fr;column-gap:12px;row-gap:2px}
+    .owner-why .owner-step .num{width:30px;height:30px;min-width:30px;font-size:.85rem;margin:0;grid-row:span 2}
+    .owner-why .owner-step span{font-size:.88rem;line-height:1.4}
+
+    .referral-fold{margin-top:14px;border:1px solid var(--line);border-radius:22px;background:var(--card)}
+    .referral-fold summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 26px}
+    .referral-fold summary::-webkit-details-marker{display:none}
+    .referral-fold summary small{display:block;color:#9a9a9a;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;margin-bottom:4px}
+    .referral-fold summary strong{font-size:1.15rem}
+    .fold-ico{width:36px;height:36px;flex:0 0 36px;border-radius:50%;border:1px solid #333;display:grid;place-items:center;font-size:1.3rem;color:#ccc;transition:transform .2s}
+    .referral-fold[open] .fold-ico{transform:rotate(45deg)}
+    .referral-fold .referral{margin:0;border:0;border-top:1px solid var(--line);border-radius:0 0 22px 22px;background:none}
+    .referral-fold .referral-copy .eyebrow,.referral-fold .referral-copy h3{display:none}
+
+    @media(max-width:900px){
+      .head-side{align-items:flex-start}
+      .carousel>.real-car{flex-basis:calc((100% - 14px)/2.25)}
+      .owner-why .owner-steps{grid-template-columns:1fr 1fr}
+      .review-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;-webkit-overflow-scrolling:touch}
+      .review-grid::-webkit-scrollbar{display:none}
+      .review{flex:0 0 84%;scroll-snap-align:start}
+    }
+    @media(max-width:560px){
+      section{padding:56px 0}
+      .section-head{margin-bottom:26px}
+      .carousel>.real-car{flex-basis:78%}
+      .visual{min-height:250px}
+      .step{padding:14px}
+      .owner-why{padding:22px}
+      .why-grid{grid-template-columns:1fr;gap:14px}
+      .owner-why .owner-steps{grid-template-columns:1fr;gap:14px}
+      .referral-fold summary{padding:18px 20px}
+      .referral-fold summary strong{font-size:1rem}
+      .service{min-height:0;padding:24px}
+      .service h3{font-size:1.6rem}
+      .about-photo{min-height:0;aspect-ratio:4/3.2}
+      .about-copy{padding:26px}
+      .final-cta{padding:72px 0}
+    }
+
 </style>
 
   <meta name="robots" content="index,follow">
@@ -1194,9 +1255,15 @@
           <div class="eyebrow">Coches reales</div>
           <h2>Nada de fotos de catálogo.</h2>
         </div>
-        <p>Vehículos reales con los que hemos trabajado. Del utilitario al SUV premium: buscamos el coche que encaja contigo y tu presupuesto.</p>
+        <div class="head-side">
+          <p>Vehículos reales con los que hemos trabajado. Del utilitario al SUV premium: buscamos el coche que encaja contigo y tu presupuesto.</p>
+          <div class="car-nav" data-carousel-nav="realCars" hidden>
+            <button type="button" data-dir="-1" aria-label="Fotos anteriores">‹</button>
+            <button type="button" data-dir="1" aria-label="Más fotos">›</button>
+          </div>
+        </div>
       </div>
-      <div class="real-grid">
+      <div class="real-grid carousel" id="realCars" tabindex="0" aria-label="Fotos de coches reales">
         <figure class="real-car">
           <img src="coche-bmw-x3.jpg" alt="BMW X3 de Aiman Motors" width="698" height="742" loading="lazy" decoding="async">
           <figcaption>BMW X3</figcaption>
@@ -1254,15 +1321,14 @@
           <div class="why"><span class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><strong>Seguimiento del alquiler</strong><span>Te mantenemos informado de cada alquiler de tu coche.</span></div>
           <div class="why"><span class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></span><strong>Comunicación directa</strong><span>Hablas directamente con nosotros, por teléfono o WhatsApp.</span></div>
         </div>
+        <div class="steps-title">Cómo funciona</div>
+        <div class="owner-steps" aria-label="Cómo funciona el alquiler de tu coche">
+          <div class="owner-step"><div class="num">1</div><strong>Nos cuentas tu coche</strong><span>Marca, modelo, año, kilómetros, ciudad y disponibilidad.</span></div>
+          <div class="owner-step"><div class="num">2</div><strong>Evaluación previa</strong><span>Valoramos tu vehículo y si encaja para el alquiler.</span></div>
+          <div class="owner-step"><div class="num">3</div><strong>Acordamos las condiciones</strong><span>Todo claro y por adelantado. Tú decides si seguimos.</span></div>
+          <div class="owner-step"><div class="num">4</div><strong>Gestionamos el alquiler</strong><span>Coordinamos las reservas y te mantenemos informado.</span></div>
+        </div>
       </div>
-
-      <div class="owner-steps" aria-label="Cómo funciona el alquiler de tu coche">
-        <div class="owner-step"><div class="num">1</div><strong>Nos cuentas tu coche</strong><span>Marca, modelo, año, kilómetros, ciudad y disponibilidad.</span></div>
-        <div class="owner-step"><div class="num">2</div><strong>Evaluación previa</strong><span>Valoramos tu vehículo y si encaja para el alquiler.</span></div>
-        <div class="owner-step"><div class="num">3</div><strong>Acordamos las condiciones</strong><span>Todo claro y por adelantado. Tú decides si seguimos.</span></div>
-        <div class="owner-step"><div class="num">4</div><strong>Gestionamos el alquiler</strong><span>Coordinamos las reservas y te mantenemos informado.</span></div>
-      </div>
-
 
       <div class="sim" id="simulador">
         <div class="sim-head">
@@ -1310,6 +1376,11 @@
         <div class="sim-cta"><a class="btn" href="#propietarios" data-open-modal="ownerModal">QUIERO QUE EVALUÉIS MI COCHE</a></div>
       </div>
 
+      <details class="referral-fold">
+        <summary>
+          <span><small>Programa de recomendaciones</small><strong>¿Conoces a otro propietario? Recomiéndanos</strong></span>
+          <span class="fold-ico" aria-hidden="true">+</span>
+        </summary>
       <div class="referral" id="recomienda">
         <div class="referral-copy">
           <div class="eyebrow">Programa de recomendaciones</div>
@@ -1339,6 +1410,7 @@
           </div>
         </div>
       </div>
+      </details>
 
       <div class="owner-cta-row">
         <a class="btn" href="#propietarios" data-open-modal="ownerModal">QUIERO ALQUILAR MI COCHE</a>
@@ -1995,6 +2067,26 @@ document.querySelectorAll(".lead-form").forEach(form=>{
 })();
 </script>
 
+<script>
+(function(){
+  document.querySelectorAll("[data-carousel-nav]").forEach(function(nav){
+    var track=document.getElementById(nav.dataset.carouselNav);
+    if(!track) return;
+    var prev=nav.querySelector('[data-dir="-1"]'), next=nav.querySelector('[data-dir="1"]');
+    function paso(){ var c=track.querySelector(".real-car"); return c ? c.getBoundingClientRect().width+14 : track.clientWidth; }
+    function update(){
+      nav.hidden=!(track.scrollWidth>track.clientWidth+4);
+      prev.disabled=track.scrollLeft<4;
+      next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-4;
+    }
+    nav.addEventListener("click",function(e){ var b=e.target.closest("button"); if(b) track.scrollBy({left:paso()*Number(b.dataset.dir),behavior:"smooth"}); });
+    track.addEventListener("scroll",update,{passive:true});
+    window.addEventListener("resize",update);
+    window.addEventListener("load",update);
+    update();
+  });
+})();
+</script>
 <script src="propietarios.js" defer></script>
 </body>
 </html>
