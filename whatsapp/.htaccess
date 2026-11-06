@@ -1,0 +1,10 @@
+Options -Indexes
+# Pasar la cabecera Authorization a PHP
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+# Solo se pueden abrir el webhook y la página de activación
+<FilesMatch "^(nucleo|conocimiento)\.php$">
+Require all denied
+</FilesMatch>

@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /enviar.php
 Disallow: /docs/
+Disallow: /whatsapp/
 
 Sitemap: https://aimanmotors.com/sitemap.xml
