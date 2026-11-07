@@ -6,7 +6,7 @@
  */
 
 /* ===== Configuración editable =====
- * Los valores del simulador son SOLO DE EJEMPLO: no son comisiones acordadas.
+ * Comisión de Aimán Motors: 40 % sobre lo que paga la plataforma (después de su comisión).
  * Cambia "recompensa" cuando las condiciones del programa estén definidas
  * (déjalo vacío para no prometer nada).
  */
