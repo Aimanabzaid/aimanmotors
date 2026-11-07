@@ -784,7 +784,8 @@
     .review blockquote{margin:0;color:#d8d8d8;flex:1}
     .review figcaption{display:flex;align-items:center;gap:12px}
     .review-avatar{width:40px;height:40px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-weight:900}
-    .reviews-more{text-align:center;margin-top:26px}
+    .reviews-more{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
+    @media(max-width:560px){.reviews-more .btn{width:100%}}
     @media(max-width:900px){.review-grid{grid-template-columns:1fr}}
 
     /* FAQ */
@@ -1483,7 +1484,10 @@
           <figcaption><span class="review-avatar" aria-hidden="true">M</span><span><strong>María del Pilar M.</strong><small>Reseña en Google</small></span></figcaption>
         </figure>
       </div>
-      <div class="reviews-more"><a class="btn dark" href="https://www.google.com/search?q=Aiman+Motors+Spain+rese%C3%B1as" target="_blank" rel="noopener">VER TODAS LAS RESEÑAS EN GOOGLE</a></div>
+      <div class="reviews-more">
+        <a class="btn" href="https://g.page/r/CZtegr_B4jHLEAE/review" target="_blank" rel="noopener">★ DÉJANOS TU RESEÑA</a>
+        <a class="btn dark" href="https://www.google.com/search?q=Aiman+Motors+Spain+rese%C3%B1as" target="_blank" rel="noopener">VER TODAS EN GOOGLE</a>
+      </div>
     </div>
   </section>
 
@@ -2106,6 +2110,7 @@ document.querySelectorAll(".lead-form").forEach(form=>{
     if(h.indexOf("wa.me/34604819675")>-1) amEvento("whatsapp");
     else if(h.indexOf("instagram.com")>-1) amEvento("instagram");
     else if(h.indexOf("facebook.com")>-1) amEvento("facebook");
+    else if(h.indexOf("g.page/r/")>-1) amEvento("dejar_resena");
     else if(h.indexOf("google.com/search")>-1) amEvento("resenas");
     else if(h.indexOf("mailto:")===0) amEvento("llamada");
     if(m==="ownerModal") amEvento("abrir_preevaluacion");

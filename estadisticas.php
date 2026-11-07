@@ -98,7 +98,7 @@ $nombresAcc = [
     'abrir_busqueda' => 'Abren «Buscar mi coche»', 'envio_busqueda' => 'Envían búsqueda', 'uso_simulador' => 'Usan el simulador',
     'envio_recomendacion' => 'Crean enlace de recomendación', 'abrir_disponibilidad' => 'Abren «Actualizar disponibilidad»',
     'envio_disponibilidad' => 'Actualizan disponibilidad', 'instagram' => 'Clics en Instagram', 'facebook' => 'Clics en Facebook',
-    'llamada' => 'Clics en el email', 'resenas' => 'Clics en reseñas de Google',
+    'llamada' => 'Clics en el email', 'resenas' => 'Ven las reseñas de Google', 'dejar_resena' => 'Pulsan «Déjanos tu reseña»',
 ];
 $nombresPag = ['/' => 'Portada', '/aviso-legal.html' => 'Aviso legal', '/privacidad.html' => 'Privacidad', '/cookies.html' => 'Cookies'];
 
