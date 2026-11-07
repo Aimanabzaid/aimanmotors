@@ -6,7 +6,7 @@
  */
 
 /* ===== Configuración editable =====
- * Comisión de Aimán Motors: 40 % sobre lo que paga la plataforma (después de su comisión).
+ * Comisión estándar de Aimán Motors: 40 % sobre lo que paga la plataforma (después de su comisión); puede variar.
  * Cambia "recompensa" cuando las condiciones del programa estén definidas
  * (déjalo vacío para no prometer nada).
  */

@@ -39,7 +39,7 @@ Revisión precompra y mantenimiento (aceite, filtros, frenos, diagnosis, puesta 
 
 # CONDICIONES
 - Plataformas: los coches se alquilan SOLO a través de plataformas de alquiler entre particulares (Getaround y Amovens). No hacemos alquileres directos.
-- Comisión: 40 % para Aimán Motors y 60 % para el propietario, calculado sobre lo que paga la plataforma después de su propia comisión.
+- Comisión: la estándar es 40 % para Aimán Motors y 60 % para el propietario, calculada sobre lo que paga la plataforma después de su propia comisión. Puede variar según el coche y el caso; se confirma antes de empezar.
 - Pagos: el propietario recibe su parte después de cada alquiler, en cuanto la plataforma liquida el pago.
 - Seguro: durante cada alquiler el coche está cubierto por el seguro que incluye la plataforma. Las coberturas concretas se explican antes de empezar.
 - Daños: Aimán Motors revisa el coche antes y después de cada alquiler y, si hay daños, tramita el parte con el seguro de la plataforma e informa al propietario.
