@@ -65,7 +65,7 @@
 <main class="wrap">
   <div class="eyebrow">Información legal</div>
   <h1>Política de privacidad</h1>
-  <p class="updated">Última actualización: 6 de noviembre de 2026</p>
+  <p class="updated">Última actualización: 7 de noviembre de 2026</p>
 
   <p>En Aiman Motors cuidamos tus datos. Aquí te explicamos, de forma clara, qué datos tratamos, para qué y qué derechos tienes, conforme al Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
 
@@ -94,6 +94,7 @@
   </ul>
   <p>Cuando envías un formulario, los datos viajan cifrados a nuestro servidor. Allí se guarda un registro de tu solicitud, con un número de referencia, en una zona privada que no es accesible desde internet, y se nos envía por correo electrónico a <a href="mailto:aimanmotorsg@gmail.com">aimanmotorsg@gmail.com</a>. Las fotografías no se guardan en el servidor: solo se adjuntan a ese correo. No pedimos datos que no necesitemos (por ejemplo, DNI, matrícula o datos bancarios). Si eliges la opción de WhatsApp, el formulario prepara un mensaje que se abre en tu aplicación y eres tú quien decide enviarlo.</p>
   <p>El simulador de ingresos funciona solo en tu navegador: los valores que introduces no se envían ni se guardan.</p>
+  <p><strong>Estadísticas de uso.</strong> Para saber cómo se usa la web, registramos de forma anónima y agregada qué páginas se visitan, desde dónde se llega (por ejemplo, Google o Instagram), el tipo de dispositivo y acciones como pulsar el botón de WhatsApp o enviar un formulario. No usamos cookies para ello ni guardamos tu dirección IP: para no contar dos veces a la misma persona en un día se calcula una huella cifrada que se borra al día siguiente. Solo conservamos totales diarios que no permiten identificarte.</p>
   <p><strong>Asistente de WhatsApp.</strong> Cuando nos escribes por WhatsApp, te puede responder primero un asistente automático con inteligencia artificial, que se identifica como tal. Usa los mensajes de la conversación para resolver tus dudas y, si quieres, registrar tu solicitud con una referencia. Guardamos el historial reciente del chat en nuestra zona privada del servidor para poder seguir la conversación. Aimán puede atenderte personalmente en cualquier momento: basta con pedirlo. El asistente no toma decisiones sobre ti; la aceptación de cualquier vehículo la decide una persona.</p>
 
   <h2>3. Para qué los usamos</h2>
@@ -144,5 +145,28 @@
     </div>
   </div>
 </footer>
+<script>
+/* Estadísticas anónimas sin cookies (ver visita.php) */
+(function(){
+  function send(o){ try{ var b=JSON.stringify(o);
+    if(navigator.sendBeacon){ navigator.sendBeacon("visita.php", new Blob([b],{type:"application/json"})); }
+    else { fetch("visita.php",{method:"POST",body:b,keepalive:true,headers:{"Content-Type":"application/json"}}); } }catch(e){} }
+  var q=new URLSearchParams(location.search);
+  send({t:"v",p:location.pathname,r:document.referrer,s:q.get("utm_source")||"",w:window.innerWidth});
+  window.amEvento=function(e){ send({t:"e",e:e,p:location.pathname}); };
+  document.addEventListener("click",function(ev){
+    var a=ev.target.closest("a,[data-open-modal]"); if(!a) return;
+    var h=a.getAttribute("href")||"", m=a.getAttribute("data-open-modal");
+    if(h.indexOf("wa.me/34604819675")>-1) amEvento("whatsapp");
+    else if(h.indexOf("instagram.com")>-1) amEvento("instagram");
+    else if(h.indexOf("facebook.com")>-1) amEvento("facebook");
+    else if(h.indexOf("google.com/search")>-1) amEvento("resenas");
+    else if(h.indexOf("mailto:")===0) amEvento("llamada");
+    if(m==="ownerModal") amEvento("abrir_preevaluacion");
+    else if(m==="carModal") amEvento("abrir_busqueda");
+    else if(m==="dispModal") amEvento("abrir_disponibilidad");
+  },true);
+})();
+</script>
 </body>
 </html>

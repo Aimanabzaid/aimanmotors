@@ -72,6 +72,8 @@ const CONFIG_PROPIETARIOS = {
         el.addEventListener("blur", render);
       });
     }
+    let usado = false;
+    root.addEventListener("input", () => { if (!usado && window.amEvento) { usado = true; amEvento("uso_simulador"); } });
     bind("precio", n => { state.precio = clamp(Math.round(n * 100) / 100, 0, 1000); });
     bind("dias", n => { state.dias = clamp(Math.round(n), 0, 31); });
     bind("aiman", n => { state.aiman = clamp(Math.round(n), 0, 100); });
@@ -295,6 +297,7 @@ const CONFIG_PROPIETARIOS = {
           store.set("aiman_ultima_ref", ultimaRef, true);
           store.set("aiman_ultimo_tel", form.elements.telefono.value, true);
           form.hidden = true; okView.hidden = false;
+          if (window.amEvento) amEvento("envio_preevaluacion");
           const card = form.closest(".modal-card"); if (card) card.scrollTop = 0;
         } else {
           setStatus(form, (data.mensaje || "No se ha podido enviar.") + " También puedes enviarlo por WhatsApp.", "error");
@@ -338,7 +341,7 @@ const CONFIG_PROPIETARIOS = {
       try {
         const res = await fetch("enviar.php", { method: "POST", body: fd });
         const data = await res.json().catch(() => ({ ok: false }));
-        if (data.ok) { form.hidden = true; okView.hidden = false; }
+        if (data.ok) { form.hidden = true; okView.hidden = false; if (window.amEvento) amEvento("envio_disponibilidad"); }
         else setStatus(form, data.mensaje || "No se ha podido guardar.", "error");
       } catch (err) {
         setStatus(form, "No hay conexión ahora mismo. Prueba de nuevo.", "error");
@@ -379,6 +382,7 @@ const CONFIG_PROPIETARIOS = {
           $("[data-ref-link]", res).value = enlace;
           $("[data-ref-msg]", res).textContent = data.mensaje === "Código creado." ? "" : data.mensaje;
           form.hidden = true; res.hidden = false;
+          if (window.amEvento) amEvento("envio_recomendacion");
         } else setStatus(form, data.mensaje || "No se ha podido crear tu enlace.", "error");
       } catch (err) {
         setStatus(form, "No hay conexión ahora mismo. Prueba de nuevo.", "error");

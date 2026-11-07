@@ -3,5 +3,7 @@ Allow: /
 Disallow: /enviar.php
 Disallow: /docs/
 Disallow: /whatsapp/
+Disallow: /estadisticas.php
+Disallow: /visita.php
 
 Sitemap: https://aimanmotors.com/sitemap.xml

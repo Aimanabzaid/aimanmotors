@@ -110,5 +110,28 @@
     </div>
   </div>
 </footer>
+<script>
+/* Estadísticas anónimas sin cookies (ver visita.php) */
+(function(){
+  function send(o){ try{ var b=JSON.stringify(o);
+    if(navigator.sendBeacon){ navigator.sendBeacon("visita.php", new Blob([b],{type:"application/json"})); }
+    else { fetch("visita.php",{method:"POST",body:b,keepalive:true,headers:{"Content-Type":"application/json"}}); } }catch(e){} }
+  var q=new URLSearchParams(location.search);
+  send({t:"v",p:location.pathname,r:document.referrer,s:q.get("utm_source")||"",w:window.innerWidth});
+  window.amEvento=function(e){ send({t:"e",e:e,p:location.pathname}); };
+  document.addEventListener("click",function(ev){
+    var a=ev.target.closest("a,[data-open-modal]"); if(!a) return;
+    var h=a.getAttribute("href")||"", m=a.getAttribute("data-open-modal");
+    if(h.indexOf("wa.me/34604819675")>-1) amEvento("whatsapp");
+    else if(h.indexOf("instagram.com")>-1) amEvento("instagram");
+    else if(h.indexOf("facebook.com")>-1) amEvento("facebook");
+    else if(h.indexOf("google.com/search")>-1) amEvento("resenas");
+    else if(h.indexOf("mailto:")===0) amEvento("llamada");
+    if(m==="ownerModal") amEvento("abrir_preevaluacion");
+    else if(m==="carModal") amEvento("abrir_busqueda");
+    else if(m==="dispModal") amEvento("abrir_disponibilidad");
+  },true);
+})();
+</script>
 </body>
 </html>
